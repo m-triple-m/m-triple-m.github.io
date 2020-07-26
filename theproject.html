@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <style>
+
+            body{
+                margin: 0px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            header{
+                background-color: rgba(0, 0, 0, 0.493);
+            }
+
+            nav li{
+                list-style: none;
+                display: block;
+                float: left;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.308); 
+                color: white;
+            }
+
+            nav li:hover{
+                background-color: black;
+            }
+
+            nav ul{
+                /* background-color: rgba(0, 0, 0, 0.555); */
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .section-top{
+                padding: 100px;
+                background-image: url('https://jooinn.com/images/abstract-background-1.jpg');
+                text-align: center;
+            }
+
+            .section-top h1{
+                font-weight: bolder;
+                font-size: 50px;
+            }
+
+            button{
+                color: rgb(255, 255, 255);
+                background-color: blueviolet;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.637);
+                text-shadow: 1px 1px black;
+                transition-duration: 300ms;
+            }
+
+            button:hover{
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.637);
+                transform: translatey(-5px);
+                background-color: rgb(255, 255, 255);
+                text-shadow: none;
+                color: blueviolet;
+            }
+
+            button:active{
+                border: none;
+            }
+
+            .section-one{
+                background-color: chartreuse;
+                padding: 100px;
+            }
+
+            .section-one{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .mycard img{
+                width: 100%;
+                border-radius: 10px 10px 0px 0px;
+                /* margin: 5px 5px; */
+            }
+
+            .mycard{
+                background-color: rgb(42, 42, 42);
+                width: 400px;
+                border-radius: 10px;
+            }
+
+            .mycard-body{
+                padding: 10px 50px;
+                background-color: white;
+                border-radius: 0px 0px 10px 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Option 3</li>
+                </ul>
+            </nav>
+            <section class="section-top">
+                <h1>Welcome To The Main Page!!</h1>
+                <button>Get Started</button>
+            </section>
+            <section class="section-one">
+                <div class="mycard">
+                    <img src="https://i.dlpng.com/static/png/6743744_preview.png" alt="">
+                    <div class="mycard-body">
+                        <h1>Watch TV</h1>
+                    </div>
+                </div>
+
+                <div class="mycard">
+                    <img src="https://www.netclipart.com/pp/m/18-184248_games-video-game-clipart-no-more-pencil-and.png" alt="">
+                    <div class="mycard-body">
+
+                    </div>
+                </div>
+
+                <div class="mycard">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9aa94545756393.583c5c1ad3b8f.jpg" alt="">
+                    <div class="mycard-body">
+
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10883.27181790798!2d80.92850030306576!3d26.914999624796305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1595775063321!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+        <script>
+
+            Swal.fire({
+                icon : 'success',
+                title : 'Yessss!!!',
+                text : 'You gonna Enjoy this'
+            })
+
+        </script>
+    </body>
+</html>

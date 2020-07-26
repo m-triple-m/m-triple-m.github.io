@@ -1,0 +1,220 @@
+<html>
+    <head>
+
+        <style>
+
+            body{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                height: 100%;
+            }
+
+            nav li{
+                display: inline;
+                padding: 30px;
+                background-color: green;
+                color: white;
+                margin: 0;
+                border: none;
+            }
+
+            nav li:hover{
+                background-color: black;
+            }
+
+            nav ul{
+                margin: 0;
+                padding: 0;
+            }
+
+            .row-div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .card{
+                width: 30%;
+                transition-duration: 100ms;
+                /* transition ; */
+            }
+
+            .card img{
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+            }
+
+            .card .body{
+                padding: 10px;
+            }
+
+            .card:hover{
+                box-shadow: 4px 4px 20px 5px rgba(15, 15, 15, 0.192);
+                /* transform: scale(1.1) rotateZ(350deg); */
+                /* transform: translateX(200px) rotateZ(10deg); */
+                /* transform: rotateZ(3deg); */
+                /* transform: translateX(10deg); */
+                transition-timing-function: ease-out;
+                /* transform: ; */
+            }
+
+            .mya{
+                border-radius: 20px;
+                width: 200px;
+                margin-left: 100px;
+                margin-top: 50px;
+                /* transform: rotateZ(-20deg); */
+                transition-duration: 2s;
+                /* transition-property: box-shadow; */
+            }
+
+            .mya:hover{
+                /* transform: rotateZ(0deg) translateX(30px) translateY(30px); */
+                transform: rotateZ(360deg) scale(1.1);
+            }
+
+            .my-cards{
+                margin-top: 400px;
+                margin-left: 200px;
+                display: flex;
+
+            }
+
+            .min-cards{
+                height: 470px;
+                width: 270px;
+                background-color: rgb(49, 49, 49);
+                border-radius: 10px;
+                margin-left: -70px;
+                border: 1px solid rgb(197, 98, 18);
+                transition-duration: 400ms;
+                color: white;
+                box-shadow: -10px 50px 100px 3px rgba(0, 0, 0, 0.164);
+            }
+
+            .min-cards:hover{
+                transform: translateX(-80px) translateY(-50px) rotateZ(-10deg) scale(1.1) rotate3d(1, 5, 5, 20deg);
+                box-shadow: 50px 110px 100px 3px rgba(0, 0, 0, 0.664);
+            }
+
+            .min-card-image{
+                width: 100%;
+                border-radius: 10px;
+            }
+
+
+        </style>
+
+    </head>
+    <body style="padding-bottom: 200px;margin: 0;">
+        
+        <nav>
+            <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+                <li>Option 4</li>
+            </ul>
+        </nav>
+
+        <div style="padding: 30px;background-color: blueviolet;display: none;">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 10rem;" class="row-div">
+            <div class="card">
+                <img src="https://assets.vg247.com/current//2020/07/crash_bandicoot_on_the_run_070920.jpg" alt="">
+                <div class="body">
+                    <h2>Crash Bandicoot</h2>
+                    <p>The New Mobile Game</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://assets.vg247.com/current//2020/07/crash_bandicoot_on_the_run_070920.jpg" alt="">
+                <div class="body">
+                    <h2>Crash Bandicoot</h2>
+                    <p>The New Mobile Game</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://assets.vg247.com/current//2020/07/crash_bandicoot_on_the_run_070920.jpg" alt="">
+                <div class="body">
+                    <h2>Crash Bandicoot</h2>
+                    <p>The New Mobile Game</p>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="mya">
+
+        <div class="my-cards">
+            <div class="min-cards">
+                <img class="min-card-image" src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://images-na.ssl-images-amazon.com/images/I/91ebheNmoUL._RI_.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_%282016_poster%29.png" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://images-na.ssl-images-amazon.com/images/I/81%2BNup8-8NL._SL1500_.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            <div class="min-cards">
+                <img class="min-card-image" src="https://images-na.ssl-images-amazon.com/images/I/81%2BNup8-8NL._SL1500_.jpg" alt="">
+                <div style="padding: 0px 10px;">
+                    <h3>Avengers Endgame</h3>
+                    <h5>Rating : 8.3 Stars</h5>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+    </body>
+</html>
