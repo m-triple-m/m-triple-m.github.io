@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        section{
+            padding: 30% 0;
+        }
+    </style>
+
+  </head>
+  <body>
+    <section class="bg-light">
+        <h1 class="text-center 1">Enter a Song Name</h1>
+        <input type="text" id="mytext">
+        <button id="search">Search</button>
+    </section>
+    <section class="bg-danger" id="result">
+        
+    </section>
+    <section class="bg-warning">
+        <h1 class="text-center">Section 3</h1>
+    </section>
+
+    <section class="bg-dark">
+        <h1 class="text-center">Section 4</h1>
+    </section>
+
+    <section class="bg-primary">
+        <h1 class="text-center">Section 5</h1>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+        
+    <script>
+        ScrollReveal().reveal('.text-center', {delay : 100, easing: 'ease-in', distance : '100px', origin : 'left'});
+
+        let apikey = '2467ae4b';
+
+        // Set up our HTTP request
+        var xhr = new XMLHttpRequest();
+
+        // Setup our listener to process completed requests
+        xhr.onload = function () {
+
+            // Process our return data
+            if (xhr.status >= 200 && xhr.status < 300) {
+                // What do when the request is successful
+                // console.log('success!', xhr);
+                data = xhr.response;
+                data = JSON.parse(data);
+                console.log(data);
+                keys = Object.keys(data);
+
+                for(let i=0;i<keys.length;i++){
+                    document.getElementById('result').innerHTML+=`<h3>${keys[i]}</h3><h4>${data[keys[i]]}</h4>`;
+                }
+
+            } else {
+                // What do when the request fails
+                console.log('The request failed!');
+            }
+
+            // Code that should run regardless of the request status
+            console.log('This always runs...');
+        };
+
+        // Create and send a GET request
+        // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+        // The second argument is the endpoint URL
+        
+        
+        getDetails = (name, year) => {
+            xhr.open('GET', 'http://www.omdbapi.com/?t='+name+'&y='+year+'&plot=full&apikey=2467ae4b');
+            xhr.send();
+        }
+        // document.getElementById('search').onclick(event => {
+        //     console.log(event);
+        // })
+
+        document.addEventListener('click', function (event) {
+
+        // If the clicked element doesn't have the right selector, bail
+        if (!event.target.matches('#search')) return;
+
+        // Don't follow the link
+        // event.preventDefault();
+
+        // Log the clicked element in the console
+        console.log(event.target);
+        getDetails('Inception', '2010');
+        }, false);
+
+    </script>
+  </body>
+</html>
