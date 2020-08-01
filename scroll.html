@@ -13,14 +13,125 @@
         section{
             padding: 30% 0;
         }
+
+        input{
+            border-radius: 0;
+        }
+
+        h4 , h3{
+            /* display: inline; */
+        }
+
+        h4{
+            margin-top: 30px;
+            color: blueviolet;
+        }
+
+        body{
+            font-family: cursive;
+        }
     </style>
 
   </head>
   <body>
+
+    <div class="col-md-8 card shadow-lg mx-auto mt-5">
+        <div class="card-body">
+            <h1 class="text-center">Enter a Movie Name</h1>
+            <hr>
+            <input type="text" class="form-control mb-4" placeholder="Movie Name" id="movie_name">
+            <input type="text" class="form-control mb-4" id="year" placeholder="Release Year">
+            <button id="search" class="btn btn-primary">Search</button>
+
+            <div class="mb-5 mt-5" id="result" >
+                <h2 class="text-center" >Movie Details</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img class="" src="" id="poster">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Title : </h3>
+                                <h4 id="title"></h4>
+
+                                <br>
+                                <h3>Release Year : </h3>
+                                <h4 id="year"></h4>
+
+                                <br>
+                                <h3>Censor Rating : </h3>
+                                <h4 id="rated"></h4>
+
+                                <!-- <br>
+                                <h3>Real : </h3>
+                                <h4 id="released"></h4> -->
+
+                                <br>
+                                <h3>Runtime : </h3>
+                                <h4 id="runtime"></h4>
+
+                                <br>
+                                <h3>Genre : </h3>
+                                <h4 id="genre"></h4>
+
+                                <br>
+                                <h3>Director : </h3>
+                                <h4 id="director"></h4>
+
+                                <br>
+                                <h3>Writer : </h3>
+                                <h4 id="writer"></h4>
+
+                                <br>
+                                <h3>Actors : </h3>
+                                <h4 id="actors"></h4>
+
+                                
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <br>
+                                <h3>Story : </h3>
+                                <h4 id="plot"></h4>
+
+                                <br>
+                                <h3>Language : </h3>
+                                <h4 id="language"></h4>
+
+                                <br>
+                                <h3>Country : </h3>
+                                <h4 id="country"></h4>
+
+                                <br>
+                                <h3>Awards : </h3>
+                                <h4 id="awards"></h4>
+
+                                <br>
+                                <h3>User Ratings : </h3>
+                                <h4 id="rating"></h4>
+
+                                <br>
+                                <h3>Meta Score : </h3>
+                                <h4 id="metascore"></h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="bg-light">
         <h1 class="text-center 1">Enter a Song Name</h1>
-        <input type="text" id="mytext">
-        <button id="search">Search</button>
+        <input type="text">
+        
     </section>
     <section class="bg-danger" id="result">
         
@@ -60,9 +171,29 @@
                 console.log(data);
                 keys = Object.keys(data);
 
-                for(let i=0;i<keys.length;i++){
-                    document.getElementById('result').innerHTML+=`<h3>${keys[i]}</h3><h4>${data[keys[i]]}</h4>`;
-                }
+                // for(let i=0;i<keys.length;i++){
+                //     document.getElementById('result').innerHTML+=`<h3>${keys[i]}</h3><h4>${data[keys[i]]}</h4>`;
+                // }
+                document.getElementById('result').style.display = "relative";
+                document.getElementById('poster').setAttribute('src', data['Poster'])
+                document.getElementById('title').innerHTML=data['Title'];
+                document.getElementById('year').innerHTML=data['Year'];
+                document.getElementById('rated').innerHTML=data['Rated'];
+                document.getElementById('runtime').innerHTML=data['Runtime'];
+                document.getElementById('genre').innerHTML=data['Genre'];
+                document.getElementById('director').innerHTML=data['Director'];
+                document.getElementById('writer').innerHTML=data['Writer'];
+                document.getElementById('actors').innerHTML=data['Actors'];
+                document.getElementById('plot').innerHTML=data['Plot'];
+                document.getElementById('language').innerHTML=data['Language'];
+                document.getElementById('country').innerHTML=data['Country'];
+                document.getElementById('rating').innerHTML=data['Rating'];
+                document.getElementById('awards').innerHTML=data['Awards'];
+                document.getElementById('metascore').innerHTML=data['Metascore'];
+                // document.getElementById('runtime').innerHTML=data['Runtime'];
+                // document.getElementById('runtime').innerHTML=data['Runtime'];
+                // document.getElementById('runtime').innerHTML=data['Runtime'];
+
 
             } else {
                 // What do when the request fails
@@ -79,7 +210,7 @@
         
         
         getDetails = (name, year) => {
-            xhr.open('GET', 'http://www.omdbapi.com/?t='+name+'&y='+year+'&plot=full&apikey=2467ae4b');
+            xhr.open('GET', 'http://www.omdbapi.com/?t='+name+'&plot=full&apikey=2467ae4b');
             xhr.send();
         }
         // document.getElementById('search').onclick(event => {
@@ -95,8 +226,8 @@
         // event.preventDefault();
 
         // Log the clicked element in the console
-        console.log(event.target);
-        getDetails('Inception', '2010');
+        // console.log(event);
+        getDetails(document.getElementById('movie_name').value, document.getElementById('year').value);
         }, false);
 
     </script>
