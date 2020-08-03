@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+      body{
+          font-family: sans-serif;
+        }
+
+          nav{
+            /* height: 5rem; */
+            /* border-color: white;
+            border-width: 0 0 1px 0;
+            border-style: solid; */
+          }
+
+          header{
+            margin-top: 4.9rem;
+              padding: 5rem 5rem;
+              border-radius: 0rem 0rem 0rem 40rem;
+              color: white;
+              box-shadow: 3px -3px 5px 1px rgba(0, 0, 0, 0.219) inset;
+          }
+
+          header h1{
+            font-size: 3rem;
+            font-weight: bolder;
+            margin: 2rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+          }
+
+          header img ,  .section1 img{
+            box-shadow: 2px 2px 5px 2px rgba(2, 36, 56, 0.089), -2px -2px 5px 2px rgba(4, 48, 85, 0.103);
+          }
+
+          .section1{
+            padding: 10rem 0;
+          }
+
+          .section1 h4{
+              margin-top: 5rem;
+          }
+
+          .section1 h1{
+            font-size: 2rem;
+            font-weight: bolder;
+          }
+
+          .section1 img{
+              width: 80%;
+              margin-top: 2rem;
+              /* margin-left: auto; */
+              /* margin-right: auto; */
+          }
+
+          button{
+            border-radius: 5rem;
+            padding: 0.3rem 1.5rem;
+            border: 1px solid white;
+            color: white;
+            background-color: rgba(255, 0, 0, 0);
+            transition-duration: 200ms;
+          }
+
+          button:hover{
+            color: rgb(0, 110, 255);
+            background-color: white;
+            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.185);
+          }
+
+          li{
+            font-size: 20px;
+            list-style: none;
+            padding: 0.5rem 0;
+          }
+
+          footer{
+            padding: 2rem 2rem;
+            color: whitesmoke;
+          }
+
+          footer h3{
+            font-weight: bolder;
+            font-size: 1.5rem;
+          }
+
+          footer p{
+            margin: 0.1rem 1rem;
+            font-size: 1.2rem;
+          }
+
+          .lvl{
+              font-weight: bolder;
+              width: fit-content;
+              padding: 0.1rem 1rem;
+              border-radius: 5rem;
+              font-size: 0.8rem;
+          }
+
+          .lvl-medium{
+              background-color: rgb(238, 194, 1);
+          }
+
+          .lvl-easy{
+              background-color: rgb(98, 202, 0);
+          }
+
+          .lvl-hard{
+              background-color: rgb(197, 0, 0);
+          }
+
+          /* nav li{
+              list-style: none;
+              display: inline;
+          } */
+
+          /* media queries */
+          @media screen and (max-width: 1000px) {
+
+              header{
+                  padding: 2rem 1rem;
+                  border-radius: 0rem;
+                  color: white;
+              }
+
+              header h1{
+                font-size: 2rem;
+                font-weight: bolder;
+              }
+
+              header h4{
+                margin: 1rem 0;
+              }
+
+              .section1{
+                  padding: 2rem 2rem;
+              }
+            
+              .section1 h4{
+                  margin-top: 2.5rem;
+                  font-size: 1.2rem;
+              }
+          
+              .section1 h1{
+                  font-size: 1.5rem;
+                  font-weight: bolder;
+              }
+
+              .section1 img{
+                  margin-top: 1rem;
+              }
+
+              button{
+                border-radius: 5rem;
+                padding: 0.3rem 1.5rem;
+                border: 1px solid white;
+                color: white;
+                background-color: rgba(255, 0, 0, 0);
+                transition-duration: 200ms;
+              }
+
+              button:hover{
+                color: rgb(0, 110, 255);
+                background-color: white;
+                box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.185);
+              }
+
+              button:active{
+                border: none;
+              }
+
+              li{
+                font-size: 20px;
+                list-style: none;
+                padding: 0.2rem 0;
+              }
+
+              
+
+              footer{
+                padding: 1rem 1rem;
+              }
+
+              footer h3{
+                font-size: 1.2rem;
+              }
+
+              footer p{
+                font-size: 1rem;
+              }
+
+              footer .cate{
+                margin: 2rem 0;
+              }
+
+          }
+    </style>
+
+</head>
+  <body>
+
+    <nav class="bg-primary navbar navbar-expand-lg navbar-light fixed-top">
+        <a href="#" class="navbar-brand">
+            <img style="height: 3rem;" src="logo2.png" alt="Digipodium">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+    <header class="bg-primary">
+      <div class="container">
+        <h1>Data Merg</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="project-demo1.png" class="img-fluid">
+          </div>
+
+          <div class="col-md-6">
+            <h4>Build an Single Page Application (Webapp) for Data Analysis and Visualization using Angular 10 along with MEAN stack development.</h4>
+
+            <div class="row mt-5">
+                <div class="col-md">
+                    <div class="">
+                        <h6>Language : JavaScript, TypeScript</h6>
+                        <p class="lvl lvl-medium">Medium</p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="">
+                        <h6>Type : WebApp/Website/SPA</h6>
+                        <h6>Duration : 3 Months</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-6">
+                <button class="btn-block">Register</button>
+              </div>
+
+              <div class="col-6">
+                <!-- <button class="btn-block">Button 1</button> -->
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- <section class="container section1">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Important Points</h1>
+          <ul>
+            <li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp; Important point 1</li>
+            <li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp; Important point 2</li>
+            <li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp; Important point 3</li>
+            <li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp; Important point 4</li>
+            <li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp; Important point 5</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/project-sample1.png" class="img-fluid">
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="container section1">
+        <h1>Exciting points about the project..</h1>
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="3000">
+              <img src="project-sample1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="project-sample2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="project-sample3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="project-sample4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+              <img src="project-sample5.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <h4>1. Merge Online and Offline Data</h4>
+        <div class="text-center">
+            <img class="" src="project-sample1.png" alt="">
+        </div>
+
+        <h4>2. Manage Data</h4>
+        <div class="text-center">
+            <img class="" src="project-sample2.png" alt="">
+        </div>
+
+        <h4>3. Visualize Data</h4>
+        <div class="text-center">
+            <img class="" src="project-sample3.png" alt="">
+        </div>
+
+        <h4>4. Admin Dashboard</h4>
+        <div class="text-center">
+            <img class="" src="project-sample4.png" alt="">
+        </div>
+
+        <h4>5. Authentication</h4>
+        <div class="text-center">
+            <img class="" src="project-sample5.png" alt="">
+        </div>
+        
+    </section>
+
+
+    <section class="section2">
+      <button class="text-center mb-5 mt-5">Enroll Now</button>
+    </section>
+
+    <footer class="bg-dark">
+      <div class="row">
+        <div class="col-md-3 cate">
+          <h3>IT Training</h3>
+          <p>Data Analytics</p>
+          <p>Python</p>
+          <p>Data Science</p>
+          <p>Machine Learning</p>
+          <p>Java</p>
+          <p>Advanced Java</p>
+          <p>Angular MEAN stack Development</p>
+        </div>
+        <div class="col-md-3 cate">
+          <h3>Digital Marketing</h3>
+          <p>Data Analytics</p>
+          <p>Python</p>
+          <p>Data Science</p>
+          <p>Machine Learning</p>
+          <p>Java</p>
+          <p>Advanced Java</p>
+          <p>Angular MEAN stack Development</p>
+        </div>
+        <div class="col-md-3 cate">
+          <h3>Event Management</h3>
+          <p>Data Analytics</p>
+          <p>Python</p>
+          <p>Data Science</p>
+          <p>Machine Learning</p>
+          <p>Java</p>
+          <p>Advanced Java</p>
+          <p>Angular MEAN stack Development</p>
+        </div>
+        <div class="col-md-3 cate">
+          <h3>Guided Projects</h3>
+          <p>Data Analytics</p>
+          <p>Python</p>
+          <p>Data Science</p>
+          <p>Machine Learning</p>
+          <p>Java</p>
+          <p>Advanced Java</p>
+          <p>Angular MEAN stack Development</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

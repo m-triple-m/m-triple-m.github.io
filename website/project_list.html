@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+
+        body{
+            background-color: rgb(238, 238, 238);
+        }
+
+        header h3{
+            font-weight: bolder;
+        }
+
+        header{
+            padding: 5rem 0rem;
+            background-color: white;
+        }
+
+        .project-list{
+
+        }
+
+        /* .project-list-item{
+            padding: 5rem 0;
+            border-bottom: 1px solid gray;
+        } */
+
+        .card{
+          border: none !important;
+        }
+
+        .card-content{
+            margin-top: 2rem;
+            /* font-weight: bold; */
+        }
+
+        .lvl{
+            font-weight: bolder;
+            width: fit-content;
+            padding: 0.1rem 1rem;
+            border-radius: 5rem;
+            font-size: 0.8rem;
+        }
+
+        .lvl-medium{
+            background-color: rgb(238, 194, 1);
+        }
+
+        .lvl-easy{
+            background-color: rgb(98, 202, 0);
+        }
+
+        .lvl-hard{
+            background-color: rgb(197, 0, 0);
+        }
+
+        .card-button{
+            padding: 0.4rem 1.5rem;
+            border-radius: 5px;
+            border: 1px solid rgb(212, 193, 255);
+            color: rgb(69, 21, 182);
+            background-color: rgb(214, 196, 255);
+            transition-duration: 400ms;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .card-button:hover{
+            background-color: transparent;
+            border: 1px solid rgb(69, 21, 182);
+            text-decoration: none;
+            color: rgb(69, 21, 182);
+        }
+
+        .card{
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.226);
+        }
+
+        .list-card{
+            margin-top: 5rem;
+        }
+
+        footer{
+            padding: 1rem 1rem;
+            color: white;
+            margin-top: 5rem;
+            }
+
+            footer h3{
+            font-size: 1.2rem;
+            }
+
+            footer p{
+            font-size: 1rem;
+            }
+
+            footer .cate{
+            margin: 2rem 0;
+            }
+
+
+            @media screen and (max-width: 1000px) {
+
+                header{
+                    padding: 6rem 2rem 2rem 2rem;
+                    
+                }
+
+            }
+
+    </style>
+
+</head>
+  <body>
+
+    <nav class="bg-light navbar navbar-expand-lg navbar-light fixed-top">
+        <a href="#" class="navbar-brand">
+            <img style="height: 3rem;" src="logo2.png" alt="Digipodium">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+
+      <header>
+        <div class="container">
+            <h3>Guided Project List</h3>
+            <p>View All Projects</p>
+        </div>
+      </header>
+
+
+      <div class="project-list container">
+          <!-- <div class="project-list-item">
+              <div class="row">
+                  <div class="col-md-3">
+                    
+                  </div>
+                  <div class="col-md">
+                    
+                  </div>
+              </div>
+          </div> -->
+
+          <div class="row">
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="text-muted">Langauge : JavaScript (Angular 10)</p>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>An E-Commerce Data Mining Project with Python</h5>
+                            <p class="text-muted">Langauge : Python</p>
+                            <p class="lvl lvl-easy">Easy</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="text-muted">Langauge : JavaScript (Angular 10)</p>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>An E-Commerce Data Mining Project with Python</h5>
+                            <p class="text-muted">Langauge : Python</p>
+                            <p class="lvl lvl-easy">Easy</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="text-muted">Langauge : JavaScript (Angular 10)</p>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <h5>An E-Commerce Data Mining Project with Python</h5>
+                            <p class="text-muted">Langauge : Python</p>
+                            <p class="lvl lvl-easy">Easy</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          <!-- <div class="project-list-item">
+              <div class="row">
+                  <div class="col-md-3">
+                    <img class="img-fluid" src="project-sample1.png" alt="">
+                  </div>
+                  <div class="col-md">
+                    <h4>Data Merging & Visualization tool with Angular</h4>
+                    <p>Langauge : JavaScript (Angular 10)</p>
+                  </div>
+              </div>
+          </div> -->
+      </div>
+      </div>
+
+      <footer class="bg-dark">
+        <div class="row">
+          <div class="col-md-3 cate">
+            <h3>IT Training</h3>
+            <p>Data Analytics</p>
+            <p>Python</p>
+            <p>Data Science</p>
+            <p>Machine Learning</p>
+            <p>Java</p>
+            <p>Advanced Java</p>
+            <p>Angular MEAN stack Development</p>
+          </div>
+          <div class="col-md-3 cate">
+            <h3>Digital Marketing</h3>
+            <p>Data Analytics</p>
+            <p>Python</p>
+            <p>Data Science</p>
+            <p>Machine Learning</p>
+            <p>Java</p>
+            <p>Advanced Java</p>
+            <p>Angular MEAN stack Development</p>
+          </div>
+          <div class="col-md-3 cate">
+            <h3>Event Management</h3>
+            <p>Data Analytics</p>
+            <p>Python</p>
+            <p>Data Science</p>
+            <p>Machine Learning</p>
+            <p>Java</p>
+            <p>Advanced Java</p>
+            <p>Angular MEAN stack Development</p>
+          </div>
+          <div class="col-md-3 cate">
+            <h3>Guided Projects</h3>
+            <p>Data Analytics</p>
+            <p>Python</p>
+            <p>Data Science</p>
+            <p>Machine Learning</p>
+            <p>Java</p>
+            <p>Advanced Java</p>
+            <p>Angular MEAN stack Development</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
