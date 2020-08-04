@@ -28,6 +28,10 @@ body{
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
     }
 
+    header img{
+      width: 6rem;
+    }
+
     .top-card{
       margin: -25rem auto 5rem auto;
       /* height: 45rem; */
@@ -170,8 +174,24 @@ body{
         }
 
         header h1{
-          font-size: 2rem;
+          font-size: 3rem;
           font-weight: bolder;
+        }
+
+        header img{
+          width: 4rem;
+        }
+
+        .top-card{
+          margin: -25rem auto 5rem auto;
+          width: 90%;
+          box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.144), -10px -10px 20px -1px rgba(0, 0, 0, 0.137);
+          border-radius: 0rem;
+          padding: 1rem 0.1rem;
+        }
+
+        .desc{
+          padding: 2rem;
         }
 
         header h4{
