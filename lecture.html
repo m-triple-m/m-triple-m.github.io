@@ -1,3 +1,4 @@
+
 <html>
     <head>
 
@@ -15,9 +16,6 @@
 
 
         <style>
-            h1{
-                font-size : 10px;
-            }
 
             .view {
                 width: 300px;
@@ -75,20 +73,46 @@
             .view a.info:hover {
                 box-shadow: 0 0 5px #000
             }
+
+
+            .lecture12{
+                margin: 20rem 0;
+            }
+
+            .lecture12 h1{
+
+            }
+
+            body{
+                font-family: cursive;
+            }
+
+            button{
+                padding: 0.2rem 1rem;
+                border: 2px solid darkcyan;
+                color: darkcyan;
+                font-size: 1.4rem;
+                font-weight: bolder;
+            }
+
+            button:hover{
+                background-color: darkcyan;
+                color: white;
+            }
         </style>
 
     </head>
 
     <body>
 
-        <div class="view">  
+        <!-- <div class="view">  
             <img src="back.jpeg" />  
             <div class="mask">  
             <h2>Title</h2>  
             <p>Your Text</p>  
                 <a href="#" class="info">Read More</a>  
             </div>  
-       </div>  
+       </div>   -->
 
         <!-- <h1 style="color : red">Inline CSS this Way!!</h1> -->
 
@@ -108,5 +132,27 @@
         <div class="card">
 
         </div>
+
+
+        <div class="lecture12">
+            <h1>I Know Everything...</h1>
+            <h3 id="target"></h3>
+            <button id="billy" style="margin-top:5rem">Billy</button>
+            <button id="maddy" class="" style="margin-left: 30%;">Maddy</button>
+        </div>
+
+        <script>
+
+
+
+            document.getElementById('billy').addEventListener('click', () => {
+                document.getElementById('target').innerHTML ="You clicked Billy";
+                console.log('dsds');
+            })
+
+            document.getElementById('maddy').addEventListener('click', () => {
+                document.getElementById('target').innerHTML = "You clicked Maddy";
+            })
+        </script>
     </body>
 </html>

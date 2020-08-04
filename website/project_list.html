@@ -15,23 +15,70 @@
             background-color: rgb(238, 238, 238);
         }
 
+        #back-to-top {
+          display: inline-block;
+          background-color: #0e8f94;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          border-radius: 4px;
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          transition: background-color .3s, 
+            opacity .5s, visibility .5s;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 1000;
+          font-size: 1.5rem;
+          padding: 1px;
+        }
+
+        #back-to-top.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
         header h3{
             font-weight: bolder;
         }
 
+        header h1{
+          font-size: 5rem;
+          font-weight: bolder;
+          color: white;
+        }
+
         header{
-            padding: 5rem 0rem;
-            background-color: white;
+          /* margin-top: -5rem; */
+          height: 40rem;
+          /* border-radius: 0rem 0rem 0rem 40rem; */
+          /* color: white; */
+          /* box-shadow: 3px -3px 5px 1px rgba(0, 0, 0, 0.219) inset; */
+          background-image: linear-gradient(to right bottom, #2193b0bb, #6dd5ed), url('header_background.html');
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+          /* padding: 4rem; */
         }
 
-        .project-list{
-
+        .top-card{
+          margin: -5rem auto 10rem auto;
+          /* height: 45rem; */
+          width: 80%;
+          box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.144), -10px -10px 20px -1px rgba(0, 0, 0, 0.137);
+          border-radius: 0rem;
+          padding: 3rem;
         }
 
-        /* .project-list-item{
-            padding: 5rem 0;
-            border-bottom: 1px solid gray;
-        } */
+        .section2{
+          padding: 3rem 0;
+          background-image: linear-gradient(to right bottom, #2193b0bb, #6dd5ed);
+        }
+
+        .section2 .row{
+          margin-left: 15rem;
+        }
 
         .card{
           border: none !important;
@@ -64,14 +111,18 @@
         }
 
         .language{
-          border-radius: 5px;
+          border-radius: 20px;
           border: 2px solid rgb(119, 119, 119);
           /* width: fit-content; */
           display: inline;
-          padding: 0px 6px;
+          padding: 1px 6px;
           font-weight: bold;
           color: rgb(119, 119, 119);
           font-size: 15px;
+        }
+
+        .my-card:hover{
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.164);
         }
 
         .card-button{
@@ -131,10 +182,14 @@
 
     </style>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
 </head>
   <body>
 
-    <nav class="bg-light navbar navbar-expand-lg navbar-light fixed-top">
+    <button id="back-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <nav class="bg-light navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-brand">
             <img style="height: 3rem;" src="logo2.png" alt="Digipodium">
         </a>
@@ -169,124 +224,98 @@
           </div>
     </nav>
 
-      <header>
-        <div class="container">
-            <h3>Guided Project List</h3>
-            <p>View All Projects</p>
-        </div>
+      <header class="text-center">
+        <img class="mt-5" style="width: 20rem;" src="logo2.png" alt="Digipodium">
+        <h1>Guided Project</h1>
       </header>
 
-
-      <div class="project-list container">
-          <!-- <div class="project-list-item">
-              <div class="row">
-                  <div class="col-md-3">
-                    
-                  </div>
-                  <div class="col-md">
-                    
-                  </div>
-              </div>
-          </div> -->
-
+      <div class="row justify-content-center">
+        <div class="col-md-8">
           <div class="row">
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>Data Merging & Visualization tool with Angular</h5>
-                            <p class="language">JavaScript</p>
-                            <p class="lvl lvl-medium">Medium</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
 
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>An E-Commerce Data Mining Project with Python</h5>
-                            <p class="language">Python</p>
-                            <p class="lvl lvl-easy">Easy</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
+            <div class="col-md">
+              <div class="card top-card">
+                <div class="card-body">
+                  <h3 class="text-center mt-3 mb-3">What is a Guided Project?</h3>
+                  <p class="text-center">With Guided Projects, you can learn a job-relevant skill in under two hours. 
+                    Guided Projects offer an interactive experience that includes step-by-step instructions from a subject matter expert. Everything you need to complete a Guided Project is available right in your browser. 
+                    No software or prior experience is required to get started.</p>
+                </div>
               </div>
+            </div>
 
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>Data Merging & Visualization tool with Angular</h5>
-                            <p class="text-muted">Langauge : JavaScript (Angular 10)</p>
-                            <p class="lvl lvl-medium">Medium</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>An E-Commerce Data Mining Project with Python</h5>
-                            <p class="text-muted">Langauge : Python</p>
-                            <p class="lvl lvl-easy">Easy</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>Data Merging & Visualization tool with Angular</h5>
-                            <p class="text-muted">Langauge : JavaScript (Angular 10)</p>
-                            <p class="lvl lvl-medium">Medium</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 list-card">
-                <div class="card">
-                      <div class="card-body">
-                        <img class="img-fluid" src="project-sample1.png" alt="">
-                        <div class="card-content">
-                            <h5>An E-Commerce Data Mining Project with Python</h5>
-                            <p class="text-muted">Langauge : Python</p>
-                            <p class="lvl lvl-easy">Easy</p>
-                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-
-
-          <!-- <div class="project-list-item">
-              <div class="row">
-                  <div class="col-md-3">
-                    <img class="img-fluid" src="project-sample1.png" alt="">
-                  </div>
-                  <div class="col-md">
-                    <h4>Data Merging & Visualization tool with Angular</h4>
-                    <p>Langauge : JavaScript (Angular 10)</p>
-                  </div>
-              </div>
-          </div> -->
+          </div>
+        </div>
       </div>
+
+      <section class="section2">
+        <div class="container">
+            <h3>What are the Advantages</h3>
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+              </div>
+              <div class="col-md-6">
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+                <p><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; View All Projects</p>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="project-list bg-white">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 list-card">
+                <div class="my-card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <p><b>Angular</b></p>
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="my-card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <p><b>Angular</b></p>
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-4 list-card">
+                <div class="my-card">
+                      <div class="card-body">
+                        <img class="img-fluid" src="project-sample1.png" alt="">
+                        <div class="card-content">
+                            <p><b>Angular</b></p>
+                            <h5>Data Merging & Visualization tool with Angular</h5>
+                            <p class="lvl lvl-medium">Medium</p>
+                            <a href="guided_project2.html" class="mt-4 btn-block card-button">View More</a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
       </div>
 
       <footer class="bg-dark">
@@ -336,8 +365,28 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(() => {
+
+        var btn = $('#back-to-top');
+
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+          } else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '300');
+        });
+      });
+    </script>
   </body>
 </html>

@@ -6,6 +6,7 @@
 
             body{
                 box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.178);
+                font-family: sans-serif;
             }
 
             div{
@@ -25,13 +26,12 @@
 
             .my-card{
                 width: 300px;
-                font-family: cursive;
             }
 
             .my-card:hover{
                 box-shadow: 2px 2px 25px 4px rgba(71, 35, 35, 0.404);
                 /* background-color: aquamarine; */
-                transform: scale(1.1) translateY(-20px) rotateZ(10deg);
+                /* transform: scale(1.1) translateY(-20px) rotateZ(3deg); */
             }
 
             .big-card{
@@ -40,7 +40,7 @@
                 margin-left: auto;
             }
 
-            #my-row{
+            .my-row{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
@@ -51,25 +51,37 @@
                 font-size: 80px;
                 margin-top: -20px;
                 color: white;
+                /* background-color: rgba(255, 255, 255, 0.287); */
+                /* width: fit-content; */
             }
 
             header h3{
                 font-family: 'Courier New', Courier, monospace;
                 font-size: 50px;
                 margin-bottom: 0px;
+                color: white;
+                width: fit-content;
+                background-color: rgb(18, 21, 206);
             }
 
             header{
-                text-align: center;
+                /* text-align: center; */
                 padding: 50px 50px;
-                background-image: url('https://www.bestofreviews.net/wp-content/uploads/2018/05/shutterstock_346701608-compressor.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+                background-image: linear-gradient(to bottom right, rgb(68, 0, 255), rgb(204, 0, 255));
+                /* background-repeat: no-repeat; */
+                /* background-size: cover; */
+                /* background-position: center; */
+                transition-duration: 500ms;
             }
+
 
             .my-card img{
                 width: 100%;
+                transition-duration: 100ms;
+            }
+
+            .my-card img:hover{
+                transform: scale(1.1);
             }
 
             .my-card button{
@@ -123,6 +135,50 @@
                 box-shadow: 20px 20px 30px 5px rgba(0, 0, 0, 0.486);
             }
 
+            .review img{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: 200px;
+                border-radius: 100%;
+            }
+
+            .review h1, p{
+                text-align: center;
+            }
+
+            .review h1{
+                color: rgb(47, 8, 83);
+            }
+
+            .review{
+                margin-top: 50px;
+            }
+
+            footer{
+                padding: 20px;
+                background-image: linear-gradient(to bottom, rgb(114, 65, 121), rgb(45, 28, 58));
+                margin-top: 100px;
+            }
+
+            .footer-content{
+                color: white;
+            }
+
+            .footer-content p{
+                text-align: left;
+            }
+
+            .header-content img{
+                transition-duration: 400ms;
+                box-shadow: 0px 30px 15px -15px rgba(0, 0, 0, 0.322);
+            }
+
+            .header-content img:hover{
+                transform: translateY(-20px);
+
+            }
+
 
         </style>
     </head>
@@ -130,15 +186,21 @@
     <body>
         
         <header>
-            <div style="padding: 20px;background-color: rgba(0, 0, 0, 0.287);">
-                <h3>Digipodium</h3>
-                <h1>Sophomore</h1>
+            <div class="my-row">
+                <div>
+                    <h3>Digipodium</h3>
+                    <h1>Sophomore</h1>
+                    <button>Start Now!</button>
+                </div>
+                <div class="header-content">
+                    <img style="height: 400px;" src="https://pngimg.com/uploads/student/student_PNG62518.png" alt="">
+                </div>
             </div>
         </header>
 
         <section id="mid-section">
 
-            <div id="my-row">
+            <div class="my-row">
 
                 <div class="my-card">
                     <img src="https://good2bsocial.com/wp-content/uploads/2019/05/shutterstock_1128653108-1024x605.jpg" alt="">
@@ -166,22 +228,58 @@
 
         </section>
 
-        <!-- <h1 style="padding: 10px;text-align: center;background-color: aquamarine;">Top Reviews</h1>
-        <section class="reviews">
-            <img src="pic01.jpg" alt="">
-            <h4>Ada Wong</h4>
-            <h5>Date and Time</h5>
-            <p>Hey I don't want to give my review.</p>
-        </section> -->
+        <section>
+            <h1 style="text-align: center;margin-top: 80px;font-size: 40px;">What Parents Say..</h1>
+            
+            <div class="review">
+                <img src="pic01.jpg" alt="">
+                <h1>Ashley Graham</h1>
+                <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+            </div>
 
-        <div class="big-card">
+            <div class="review">
+                <img src="pic02.jpg" alt="">
+                <h1>Ada Wong</h1>
+                <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+            </div>
+
+            <div class="review">
+                <img src="pic03.jpg" alt="">
+                <h1>Leon S Kennedy</h1>
+                <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+            </div>
+            
+        </section>
+
+        <!-- <div class="big-card">
             <a href="contactus.html">
                 <h1>Contact Us</h1>
             </a>
             
-        </div>
+        </div> -->
 
-        <img id="my-img" style="margin: 500px;width: 500px;" src="https://angular.io/assets/images/logos/angular/angular.png" alt="">
+        <!-- <img id="my-img" style="margin: 500px;width: 500px;" src="https://angular.io/assets/images/logos/angular/angular.png" alt=""> -->
+
+        <footer>
+            <div class="my-row">
+                <div class="footer-content">
+                    <h3>Sophomore Programmes</h3>
+                    <p>Web Development</p>
+                    <p>Python Programming</p>
+                    <p>Social Media Marketing</p>
+                </div>
+                <div class="footer-content">
+                    <h3>Other Programmes</h3>
+                    <p>IT Training</p>
+                    <p>Digital Marketing Service</p>
+                    <p>Event Management</p>
+
+                    <h3 style="margin-top: 20px;">
+                        <a style="color: burlywood;" href="contactus.html">Contact Us</a>
+                    </h3>
+                </div>
+            </div>
+        </footer>
 
     </body>
 </html>

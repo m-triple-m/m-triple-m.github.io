@@ -1,0 +1,243 @@
+body{
+    font-family: sans-serif;
+  }
+
+    nav{
+      /* height: 5rem; */
+      /* border-color: white;
+      border-width: 0 0 1px 0;
+      border-style: solid; */
+    }
+
+    header{
+      /* margin-top: 4.9rem; */
+      height: 40rem;
+      /* border-radius: 0rem 0rem 0rem 40rem; */
+      /* color: white; */
+      /* box-shadow: 3px -3px 5px 1px rgba(0, 0, 0, 0.219) inset; */
+      background-image: linear-gradient(to right bottom, #2193b0bb, #6dd5ed), url('header_background.html');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    header h1{
+      font-size: 3rem;
+      font-weight: bolder;
+      margin: 2rem 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+    }
+
+    .top-card{
+      margin: -25rem auto 5rem auto;
+      /* height: 45rem; */
+      width: 80%;
+      box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.144), -10px -10px 20px -1px rgba(0, 0, 0, 0.137);
+      border-radius: 0rem;
+      padding: 5rem;
+      /* margin-left: auto;
+      margin-right: auto; */
+    }
+
+    .card-col{
+      padding: 0 3rem;
+    }
+
+    header img ,  .section1 img{
+      box-shadow: 2px 2px 5px 2px rgba(2, 36, 56, 0.089), -2px -2px 5px 2px rgba(4, 48, 85, 0.103);
+    }
+
+    .section1{
+      padding: 10rem 0;
+    }
+
+    .section1 h4{
+        margin-top: 5rem;
+    }
+
+    .section1 h1{
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+
+    .section1 img{
+        width: 80%;
+        margin-top: 2rem;
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+    }
+
+    .btn-default{
+      background-image: linear-gradient(to right, #2193b0bb, #6dd5ed);
+    }
+
+    button{
+      border-radius: 5px;
+      padding: 0.3rem 1.5rem;
+      border: none;
+      color: white;
+      /* background-color: rgba(255, 0, 0, 0); */
+      transition-duration: 200ms;
+      box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.085);
+      border-width: 2px 0 0 2px;
+      border-color:  #62cfe7;
+      border-style: solid;
+    }
+
+    button:hover{
+      /* color: rgb(0, 110, 255); */
+      /* background-color: white; */
+      box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.308);
+    }
+
+    li{
+      font-size: 20px;
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+
+    footer{
+      padding: 2rem 2rem;
+      color: whitesmoke;
+    }
+
+    footer h3{
+      font-weight: bolder;
+      font-size: 1.5rem;
+    }
+
+    footer p{
+      margin: 0.1rem 1rem;
+      font-size: 1.2rem;
+    }
+
+    .lvl{
+        font-weight: bolder;
+        width: fit-content;
+        padding: 0.1rem 1rem;
+        border-radius: 5rem;
+        font-size: 0.8rem;
+    }
+
+    .lvl-medium{
+        background-color: rgb(238, 194, 1);
+    }
+
+    .lvl-easy{
+        background-color: rgb(98, 202, 0);
+    }
+
+    .lvl-hard{
+        background-color: rgb(197, 0, 0);
+    }
+
+    #back-to-top {
+        display: inline-block;
+        background-color: #0e8f94;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s, 
+          opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+        font-size: 1.5rem;
+        padding: 1px;
+      }
+
+      #back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    /* nav li{
+        list-style: none;
+        display: inline;
+    } */
+
+    /* media queries */
+    @media screen and (max-width: 1000px) {
+
+        header{
+            padding: 2rem 1rem;
+            border-radius: 0rem;
+            color: white;
+        }
+
+        header h1{
+          font-size: 2rem;
+          font-weight: bolder;
+        }
+
+        header h4{
+          margin: 1rem 0;
+        }
+
+        .section1{
+            padding: 2rem 2rem;
+        }
+      
+        .section1 h4{
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+        }
+    
+        .section1 h1{
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+        .section1 img{
+            margin-top: 1rem;
+        }
+
+        button{
+          border-radius: 5rem;
+          padding: 0.3rem 1.5rem;
+          border: 1px solid white;
+          color: white;
+          background-color: rgba(255, 0, 0, 0);
+          transition-duration: 200ms;
+        }
+
+        button:hover{
+          color: rgb(0, 110, 255);
+          background-color: white;
+          box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.185);
+        }
+
+        button:active{
+          border: none;
+        }
+
+        li{
+          font-size: 20px;
+          list-style: none;
+          padding: 0.2rem 0;
+        }
+
+        
+
+        footer{
+          padding: 1rem 1rem;
+        }
+
+        footer h3{
+          font-size: 1.2rem;
+        }
+
+        footer p{
+          font-size: 1rem;
+        }
+
+        footer .cate{
+          margin: 2rem 0;
+        }
+
+    }
+    
