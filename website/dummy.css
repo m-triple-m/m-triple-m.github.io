@@ -1,0 +1,32 @@
+header{
+
+}
+
+header img{
+    width: 100%;
+}
+
+.courses{
+    padding: 3rem 0rem;
+}
+
+.courses .card{
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .courses .course-name{
+        font-size: 1.5rem;
+        text-align: left !important;
+    }
+
+    .courses .card{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .courses .card{
+        margin-top: 1rem;
+    }
+}
