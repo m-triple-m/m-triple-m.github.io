@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Welcome to JavaScript</h1>
+        <button id="mybtn">Change Me</button>
+
+        <button id="btn-2">Another Button</button>
+
+        <button>Do you want to know my name? Click Me!!</button>
+
+        <script>
+
+            //js intro
+
+            console.log("Javascript is coool !!");
+            console.log(324+5675);
+
+            let a = 10;
+            let myname = 'Mubassir';
+
+            console.log(myname);
+
+            console.log(a);
+            console.log(typeof a);
+
+            // document.getElementById('mybtn').addEventListener('click', function(){ document.getElementById('mybtn').innerHTML = "Text Changed"; } )
+
+            document.getElementById('mybtn').onclick = function(){ document.getElementById('mybtn').style.backgroundColor = "red" }
+
+            let num1 = 3456;
+            let num2 = 7654;
+
+            let sum = num1+num2;
+
+            console.log(sum);
+
+
+            //js functions
+
+            //defining the function 
+            let myfunction = function(){
+                console.log("My Favourite");
+                console.log("Game");
+                console.log("Character");
+                console.log("is");
+                console.log("Leon S Kennedy");
+            }
+
+            //calling the function
+            myfunction();
+            myfunction();
+            myfunction();
+
+            document.getElementById('btn-2').onclick = function(){
+                alert('You were not supposed to click that button.........');
+            }
+
+        </script>
+    </body>
+</html>

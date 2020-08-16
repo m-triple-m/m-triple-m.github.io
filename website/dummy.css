@@ -14,6 +14,41 @@ header img{
     margin-top: 3rem;
 }
 
+.course-details{
+    width: 80%;
+    margin-top: 10rem;
+}
+
+.course-head{
+    padding: 3rem;
+    color: rgb(54, 54, 54);
+}
+
+.course-head h1{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+/* .course-head h4{
+
+} */
+
+.course-summary{
+    padding: 1rem 3rem;
+}
+
+.course-summary p{
+    font-size: 1.2rem;
+}
+
+.usp p{
+    /* border-top: ; */
+}
+
+.side-dec{
+    box-shadow: 3px 0px 3px 1px rgba(0, 0, 0, 0.281) inset; 
+}
+
 @media screen and (max-width: 1000px) {
     .courses .course-name{
         font-size: 1.5rem;
