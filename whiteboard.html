@@ -26,35 +26,15 @@
     </head>
 
     <body style="background-color: gray;">
-        <div class="card" style="text-align:center;color:white">
+
+        <div style="text-align:center;color:white">
             <div class="card-body">
                 <h1>Select the Color in the palate below and start drawing by clicking on board</h1>
                 <a href="https://www.google.com/search?q=pixel+art&sxsrf=ALeKk00rwETysI2nTlC-627A2ILcuHZ7Mw:1597666748580&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiT15K4nKLrAhUOzTgGHbvOAmIQ_AUoAXoECBQQAw&cshid=1597667007684189&biw=1745&bih=915" style="font-size: 2rem;background-color: yellow;" target="_blank">Example</a>
             </div>
         </div>
+
         <input type="color" id="col" style="margin-left:450px;margin-bottom: 50px;">
-        <div class="myrow">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
 
         <div class="myrow">
             <div class="box"></div>
@@ -78,31 +58,6 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-
-
-        <div class="myrow">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-
 
         <div class="myrow">
             <div class="box"></div>
@@ -343,6 +298,54 @@
             <div class="box"></div>
         </div>
 
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
         <div class="myrow">
             <div class="box"></div>
             <div class="box"></div>
@@ -414,17 +417,20 @@
             <div class="box"></div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script>
 
             let all_divs = document.getElementsByClassName('box');
 
                 for(let i=0;i<all_divs.length;i++){
+
                     all_divs[i].onclick = function(e){
-                    var sel_color = document.getElementById('col').value;
-                    console.log(e.target);
-                    e.target.style.backgroundColor = sel_color;
-                };
-            }
+                        var sel_color = document.getElementById('col').value;
+                        console.log(e.target);
+                        e.target.style.backgroundColor = sel_color;
+                    };
+
+                }
 
         </script>
     </body>
