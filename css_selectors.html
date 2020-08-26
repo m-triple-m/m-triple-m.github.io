@@ -211,7 +211,7 @@
                     <img src="https://good2bsocial.com/wp-content/uploads/2019/05/shutterstock_1128653108-1024x605.jpg" alt="">
                     <h1>Web Development</h1>
                     <p>Learn to create the most demanded reponsive and interactive websites.</p>
-                    <button>Learn More!!</button>
+                    <button id="btn1">Learn More!!</button>
                     
                 </div>
 
@@ -286,5 +286,15 @@
             </div>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script>
+            document.getElementById('btn1').onclick = function(){
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'warning'
+                    )
+            }
+        </script>
     </body>
 </html>

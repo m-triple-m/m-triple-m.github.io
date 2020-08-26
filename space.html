@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+
+        body{
+            height: 100vh;
+            
+        }
+
+        #container{
+            background-image: linear-gradient(to right, rgb(5, 5, 68), rgb(41, 4, 41));
+            /* background-attachment: fixed; */
+            /* height: 70%; */
+            overflow: hidden;
+        }
+
+        .img1{
+            top: 20rem;
+            right: 1rem;
+        }
+
+        .content{
+            height: 200vh;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div id="container">
+		<div id="scene" class="scene">
+            <div data-depth="00"><img class="" src="space_assets/scene-layer-1.png" style="width: 100%;"></div>
+            <div data-depth="0.4"><img class="" src="space_assets/scene-layer-2.png" style="width: 100%;"></div>
+            <div data-depth="0.7"><img class="" src="space_assets/scene-layer-3.png" style="width: 100%;"></div>
+            <div data-depth="0.5"><img class="" src="space_assets/scene-layer-4.png" style="width: 100%;"></div>
+            <div data-depth="1.00"><img class="" src="space_assets/scene-layer-diamond-star-large.png" style="width: 5rem;"></div>
+            <div data-depth="1.50"><img class="" src="space_assets/scene-layer-diamond-stars.png" style="width: 2rem;"></div>
+            <div data-depth="0.20"><img class="" src="space_assets/scene-layer-mars-large.png" style="width: 20rem;margin-top: 7rem;margin-left: 25rem;"></div>
+            <div data-depth="1.90"><img class="" src="space_assets/scene-layer-space-station.png" style="width: 10rem;margin-top: 7rem;margin-left: 35rem;"></div>
+            <div data-depth="1.50"><img class="img1" src="space_assets/scene-layer-earth.png" style="width: 70rem;margin-top: 7rem;margin-left: 35rem;"></div>
+		</div>
+    </div>
+    
+    <div class="content">
+
+    </div>
+      
+    <script src="parallax.min.js"></script>
+	<script>
+
+        // Pretty simple huh?
+        var scene = document.getElementById('scene', {relativeInput: true, hoverOnly: true});
+        var parallax = new Parallax(scene);
+
+	</script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

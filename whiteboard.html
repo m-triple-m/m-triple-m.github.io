@@ -29,34 +29,15 @@
 
         <div style="text-align:center;color:white">
             <div class="card-body">
-                <h1>Select the Color in the palate below and start drawing by clicking on board</h1>
+                <h1 id="target">Select the Color in the palate below and start drawing by clicking on board</h1>
                 <a href="https://www.google.com/search?q=pixel+art&sxsrf=ALeKk00rwETysI2nTlC-627A2ILcuHZ7Mw:1597666748580&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiT15K4nKLrAhUOzTgGHbvOAmIQ_AUoAXoECBQQAw&cshid=1597667007684189&biw=1745&bih=915" style="font-size: 2rem;background-color: yellow;" target="_blank">Example</a>
             </div>
         </div>
 
         <input type="color" id="col" style="margin-left:450px;margin-bottom: 50px;">
 
-        <div class="myrow">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+        <div class="myrow" id="target-row">
+            
         </div>
 
         <div class="myrow">
@@ -420,6 +401,18 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script>
 
+            
+
+            let target_element = document.getElementById('target');
+            target_element.innerHTML = "Pixel Art Website!!";
+
+            let div_element = document.getElementById('target-row');
+            
+            let boxes_to_insert = 20;
+            for(let i=0;i<boxes_to_insert;i++){
+                div_element.innerHTML += '<div class="box"></div>'
+            }
+
             let all_divs = document.getElementsByClassName('box');
 
                 for(let i=0;i<all_divs.length;i++){
@@ -431,7 +424,7 @@
                     };
 
                 }
-
+            
         </script>
     </body>
 </html>
