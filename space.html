@@ -10,7 +10,6 @@
 
         body{
             height: 100vh;
-            
         }
 
         #container{
@@ -20,13 +19,42 @@
             overflow: hidden;
         }
 
-        .img1{
-            top: 20rem;
-            right: 1rem;
-        }
-
         .content{
             height: 200vh;
+        }
+
+        .layer{
+          width: 150%;
+          margin-left: -25%;
+          margin-top: -25%;
+        }
+
+        .dimond-lg{
+          width: 5rem;
+          margin-left: 20rem;
+          margin-top: 8rem
+        }
+
+        .dimond-md{
+          width: 2rem;
+          margin-left: 10rem;
+        }
+
+        .mars-lg{
+          width: 20%;margin-top: 7%;margin-left: 25%;
+        }
+
+        .station{
+          width: 10%;margin-top: 7%;margin-left: 35%;
+        }
+
+        .earth{
+          width: 100%;margin-top: 20%;margin-left: 60%;
+        }
+
+
+        @media screen and (max-width: 1000px) {
+
         }
     </style>
 
@@ -36,16 +64,16 @@
   <body>
 
     <div id="container">
-		<div id="scene" class="scene">
-            <div data-depth="00"><img class="" src="space_assets/scene-layer-1.png" style="width: 100%;"></div>
-            <div data-depth="0.4"><img class="" src="space_assets/scene-layer-2.png" style="width: 100%;"></div>
-            <div data-depth="0.7"><img class="" src="space_assets/scene-layer-3.png" style="width: 100%;"></div>
-            <div data-depth="0.5"><img class="" src="space_assets/scene-layer-4.png" style="width: 100%;"></div>
-            <div data-depth="1.00"><img class="" src="space_assets/scene-layer-diamond-star-large.png" style="width: 5rem;"></div>
-            <div data-depth="1.50"><img class="" src="space_assets/scene-layer-diamond-stars.png" style="width: 2rem;"></div>
-            <div data-depth="0.20"><img class="" src="space_assets/scene-layer-mars-large.png" style="width: 20rem;margin-top: 7rem;margin-left: 25rem;"></div>
-            <div data-depth="1.90"><img class="" src="space_assets/scene-layer-space-station.png" style="width: 10rem;margin-top: 7rem;margin-left: 35rem;"></div>
-            <div data-depth="1.50"><img class="img1" src="space_assets/scene-layer-earth.png" style="width: 70rem;margin-top: 7rem;margin-left: 35rem;"></div>
+		<div id="scene" class="scene text-center" style="width: 100%;">
+            <div data-depth="00"><img class="layer" src="space_assets/scene-layer-1.png" style="opacity: 0.5;"></div>
+            <div data-depth="0.4"><img class="layer" src="space_assets/scene-layer-2.png"></div>
+            <div data-depth="0.7"><img class="layer" src="space_assets/scene-layer-3.png"></div>
+            <div data-depth="0.5"><img class="layer" src="space_assets/scene-layer-4.png"></div>
+            <div data-depth="0.20"><img class="mars-lg" src="space_assets/scene-layer-mars-large.png"></div>
+            <div data-depth="1.00"><img class="dimond-lg" src="space_assets/scene-layer-diamond-star-large.png"></div>
+            <div data-depth="1.50"><img class="dimond-md" src="space_assets/scene-layer-diamond-stars.png"></div>
+            <div data-depth="2.50"><img class="station" src="space_assets/scene-layer-space-station.png"></div>
+            <div data-depth="1.10"><img class="earth" src="space_assets/scene-layer-earth.png"></div>
 		</div>
     </div>
     
