@@ -20,7 +20,7 @@
         }
 
         .content{
-            height: 200vh;
+            /* height: 200vh; */
         }
 
         .layer{
@@ -52,6 +52,17 @@
           width: 100%;margin-top: 20%;margin-left: 60%;
         }
 
+        .content p{
+          font-size: 20rem;
+          text-align: center;
+
+        }
+
+        .content{
+          padding: 5rem;
+          background-color: rgb(0, 110, 255);
+        }
+
 
         @media screen and (max-width: 1000px) {
 
@@ -77,16 +88,39 @@
 		</div>
     </div>
     
-    <div class="content">
+    <!-- <div class="content">
+      <p class="st">Some Text</p>
+    </div> -->
 
-    </div>
-      
+    <!-- <div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="https://pixelcog.github.io/parallax.js/img/stellar-spire-eagle-nebula-1400x900.jpg" data-natural-width="1400" data-natural-height="900" style="height: 300px;"></div> -->
+
+    
+
+    <!-- <img id="bi" style="position: absolute;top: 100px;" class="text-center" src="https://img2.goodfon.com/wallpaper/nbig/0/27/priroda-holmy-derevya-derevo.jpg" alt=""> -->
+    
+
     <script src="parallax.min.js"></script>
+    <script src="pixi.js"></script>
 	<script>
 
         // Pretty simple huh?
         var scene = document.getElementById('scene', {relativeInput: true, hoverOnly: true});
+        // var scene2 = document.getElementById('content', {relativeInput: true});
         var parallax = new Parallax(scene);
+        // var parallax2 = new Parallax(scene2);
+
+        let type = "WebGL"
+        if(!PIXI.utils.isWebGLSupported()){
+          type = "canvas"
+        }
+
+        PIXI.utils.sayHello(type);
+        // let im = document.getElementById('bi');
+        // window.addEventListener('scroll', () => {
+        //   console.log(window.scrollY);
+        //   let top = im.style.top;
+        //   im.style.top = window.scrollY*2+'px'+top;
+        // })
 
 	</script>
     
