@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+
+        body{
+            background-color: rgb(128, 128, 128);
+            /* height: 100vh; */
+        }
+
+        .layer1{
+            background-image: url('map_2x.png');
+            /* background-size: cover; */
+            /* backgrou */
+            height: 820vh;
+            position: absolute;
+            top: 10%;
+            right: 23%;
+            bottom: 20%;
+            left: 21%;
+            /* top: 100px; */
+        }
+
+        .layer2{
+            background-image: url('check_img1_2x.png');
+            background-size: cover;
+            /* backgrou */
+            height: 400vh;
+            /* margin-top: -400vh; */
+        }
+        .layer3{
+            background-image: url('whiteString.png');
+            /* background-size: cover; */
+            background-position: center;
+            /* backgrou */
+            height: 400vh;
+            margin-top: -400vh;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+  </head>
+  <body>
+      <div class="container">
+        <div class="layer1" id="layer1"></div>
+        <div class="layer2" id="layer2"></div>
+        <div class="layer3" id="layer3"></div>
+      </div>
+      
+      
+      <div class="layer3"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(() => {
+            console.log('yay!');
+
+            window.addEventListener('scroll', () => {
+                let value = window.scrollY;
+                // console.log(value);
+
+                let div = document.getElementById('layer1');
+                div.style.top = value*-1.4+'px';
+                console.log(div.style.top)
+            })
+        })
+    </script>
+  </body>
+</html>

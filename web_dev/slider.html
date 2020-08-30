@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: rgb(148, 148, 148);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .swiper-container {
+      width: 80%;
+      height: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5rem;
+      margin-bottom: auto;
+      padding: 5rem;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 10rem;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      transform: skewX(-10deg);
+      box-shadow :2px 2px 4px 2px rgba(0, 0, 0, 0.192) ;
+      border-radius: 1rem;
+      transition-duration: 500ms;
+    }
+
+    .swiper-slide:hover{
+      /* border-right: 1rem solid red; */
+      
+    }
+
+    .hide{
+      display: none;
+    }
+
+    .menu {
+			min-width: 100px;
+			width: 70%;
+			max-width: 320px;
+
+			background-color: #2C8DFB;
+			color: #fff;
+    }
+    
+    .mcard{
+      top: 7rem;
+      left: 120%;
+      height: 33rem;
+      width: 30rem;
+      position: absolute;
+      background-color: white;
+      transition-duration: 500ms;
+      z-index: 1;
+
+      transform: skewX(-10deg);
+      border-radius: 1rem;
+      box-shadow :-2px 2px 4px 5px rgba(0, 0, 0, 0.192) ;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+    </div>
+
+    <button class="menu">Click</button>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="mcard" style="position: absolute;" id="mcard">
+    <h1>The Card Content</h1>
+    <button id="close">&times;</button>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+    let mcard = document.getElementById('mcard');
+    let scon = document.querySelector('.swiper-container');
+    let slide = document.querySelectorAll('.swiper-slide');
+    document.getElementById('close').addEventListener('click', () => {
+      mcard.style.left = 120+'%';
+      mySwiper.autoplay.start();
+    });
+    console.log(slide);
+    for(let sl of slide){
+      sl.addEventListener('click', () => {
+        console.log('lll');
+        mcard.style.left = 80+'%';
+        mySwiper.autoplay.stop();
+      })
+    }
+
+    var menuButton = document.querySelector('.menu');
+        var openMenu = function () {
+          swiper.slidePrev();
+          console.log('dsd');
+        };
+
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+				slideChangeTransitionStart: function () {
+					var slider = this;
+					if (slider.activeIndex === 0) {
+						menuButton.classList.add('cross');
+						// required because of slideToClickedSlide
+						menuButton.removeEventListener('click', openMenu, true);
+					} else {
+						menuButton.classList.remove('cross');
+					}
+				}
+				, slideChangeTransitionEnd: function () {
+					var slider = this;
+					if (slider.activeIndex === 1) {
+						menuButton.addEventListener('click', openMenu, true);
+					}
+				},
+			}
+    });
+
+    let slides = swiper.slides;
+    swiper.on('slideChange', function () {
+      console.log('slide changed');
+      let cIndex = swiper.realIndex;
+      slides[cIndex].addClass('hide');
+      console.log(slides.slice(cIndex, cIndex+3));
+    });
+    
+
+    let mySwiper = scon.swiper; 
+    console.log(mySwiper);
+  </script>
+</body>
+
+</html>
