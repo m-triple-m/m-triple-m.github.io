@@ -30,9 +30,12 @@
         }
 
         body{
-            /* height: 100vh; */
+            height: 70vh;
+            width: 80%;
             background: url('frames/plant_frame_0.png') center right no-repeat;
             background-attachment: fixed;
+            -webkit-transition: background-image 1ms;
+            transition: background-image 1ms;
             /* position: absolute;
             top : 0%;
             right : 50%;
@@ -147,7 +150,7 @@
                 // });
             }
 
-            num = Math.floor(value/4);
+            num = Math.floor(value/3);
             if(images[num]){
                 div.style.backgroundImage = "url('"+images[num].src+"')";
             }
