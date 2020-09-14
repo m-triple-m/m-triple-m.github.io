@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <style>
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjUEyiTLhCjZbdzBk2l9mTq9KgDWKSfEtKhg&usqp=CAU');
+    }
+  </style>
+
+
+
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <h1 class="text-center">Search for a Movie</h1>
+        <hr>
+        <input placeholder="Enter Your Movie Name" class="form-control mt-5">
+        <input placeholder="Enter movie release date(Optional)" class="form-control mt-3">
+        <button id="search" class="btn btn-primary mt-3">Search
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Set up our HTTP request
+    var xhr = new XMLHttpRequest();
+
+    // Setup our listener to process completed requests
+    xhr.onload = function () {
+
+      // Process our return data
+      if (xhr.status >= 200 && xhr.status < 300) {
+        // What do when the request is successful
+        // console.log('success!', xhr);
+        data = xhr.response;
+        data = JSON.parse(data);
+        console.log(data);
+        keys = Object.keys(data);
+
+      }
+      else {
+        // What do when the request fails
+        console.log('The request failed!');
+      }
+
+      // Code that should run regardless of the request status
+      console.log('This always runs...');
+    };
+    // This is for going to the website and getting 
+    getDetails = (name, year) => {
+      xhr.open('GET', 'http://www.omdbapi.com/?t=' + name + '&plot=full&apikey=2467ae4b');
+      xhr.send();
+    }
+    let mybtn = document.getElementById('search');
+
+    mybtn.onclick = function(){
+       console.log('it works')
+       getDetails('Avengers Endgame' , 2010);
+    }
+  </script>
+
+</body>
+
+</html> 

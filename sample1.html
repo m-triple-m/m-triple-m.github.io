@@ -31,7 +31,7 @@
         }
 
         #result{
-            transition-duration: 1s;
+            transition-duration: 3s;
         }
     </style>
 
@@ -46,7 +46,7 @@
             <input type="text" class="form-control mb-4" id="year" placeholder="Release Year">
             <button id="search" class="btn btn-primary">Search</button>
 
-            <div class="mb-5 mt-5" id="result" >
+            <div class="mb-5 mt-5" id="result" style="overflow: hidden;">
                 <h2 class="mb-5" style="background-color: blueviolet;color: white;padding: 10px 10px;text-align: center;">Movie Details</h2>
                 <div class="row">
                     <div class="col-md-4">
@@ -136,7 +136,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
         
     <script>
-        document.getElementById('result').style.display = 'none';
+        document.getElementById('result').style.height = '0px';
         ScrollReveal().reveal('.text-center', {delay : 100, easing: 'ease-in', distance : '100px', origin : 'left'});
 
         let apikey = '2467ae4b';
@@ -159,7 +159,7 @@
                 // for(let i=0;i<keys.length;i++){
                 //     document.getElementById('result').innerHTML+=`<h3>${keys[i]}</h3><h4>${data[keys[i]]}</h4>`;
                 // }
-                document.getElementById('result').style.display = "relative";
+                document.getElementById('result').style.height = "500px";
                 document.getElementById('poster').setAttribute('src', data['Poster'])
                 document.getElementById('title').innerHTML=data['Title'];
                 document.getElementById('year').innerHTML=data['Year'];

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEACAYseK891R3DmLQ9qzzAVxmJ4DNqwXkfQ&usqp=CAU');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    #result{
+      height: 0px;
+      overflow: hidden;
+      transition-duration: 1s;
+    }
+
+    .project-title{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      color: white;
+      font-weight: bolder;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <p class="project-title">Search My Movie</p>
+
+  <div class="container">
+    <div class="card mt-5">
+      <div class="card-body">
+        <h3 class="text-center">Enter a Movie Name here</h3>
+        <hr>
+        <input class="form-control" placeholder="Movie Name" id="name">
+        <button id="search" class="btn btn-danger mt-4">Search</button>
+      </div>
+    </div>
+
+    <div id="result" class="card mt-5">
+      <div class="card-body">
+        <p class="display-4 text-center">Movie Details</p>
+        <hr>
+
+        <div class="text-center">
+          <img class="img-fluid" id="img">
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <p class="h3">Title : </p>
+          </div>
+          <div class="col-md-8">
+            <p class="h4" id="title"></p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <p class="h3">Year : </p>
+          </div>
+          <div class="col-md-8">
+            <p class="h4" id="year"></p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <p class="h3">Rated : </p>
+          </div>
+          <div class="col-md-8">
+            <p class="h4" id="rated"></p>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <p class="h3">Genre : </p>
+          </div>
+          <div class="col-md-8">
+            <p class="h4" id="genre"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+
+
+    // Set up our HTTP request
+    var xhr = new XMLHttpRequest();
+
+    // Setup our listener to process completed requests
+    xhr.onload = function () {
+
+      // Process our return data
+      if (xhr.status >= 200 && xhr.status < 300) {
+        // What do when the request is successful
+        // console.log('success!', xhr);
+        data = xhr.response;
+        data = JSON.parse(data);
+        console.log(data.Actors);
+
+
+        document.getElementById('img').setAttribute('src', data.Poster);
+        document.getElementById('title').innerHTML = data.Title;
+        document.getElementById('year').innerHTML = data.Year;
+        document.getElementById('rated').innerHTML = data.Rated;
+        document.getElementById('genre').innerHTML = data.Genre;
+
+
+        document.getElementById('result').style.height = '850px';
+
+      } else {
+        // What do when the request fails
+        console.log('The request failed!');
+      }
+
+      // Code that should run regardless of the request status
+      console.log('This always runs...');
+    };
+
+
+    getDetails = (name, year) => {
+
+      // ye code request create kr ke send kr dega
+      xhr.open('GET', 'http://www.omdbapi.com/?t=' + name + '&plot=full&apikey=2467ae4b');
+      xhr.send();
+    }
+
+    let mybtn = document.getElementById('search');
+
+
+    mybtn.onclick = function(){
+      let movie_name = document.getElementById('name').value;
+      console.log(movie_name);
+      getDetails(movie_name, 2010);
+    }
+
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
