@@ -10,10 +10,27 @@
             .r{
                 background-color: rgb(224, 224, 224);
             }
+
+            .swiper-container {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                
+                }
+
+                .swiper-slide {
+                    background-image: linear-gradient(to bottom, white, rgb(88, 88, 88));
+                background-position: center;
+                background-size: cover;
+                width: 300px;
+                height: 300px;
+
+                }
         </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     </head>
 
     <body>
@@ -53,8 +70,34 @@
               </ul>
             </div>
           </nav>
+
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" >
+                <h1 class="text-center mt-5">Batman Trailor</h1>
+                <iframe style="margin-left: 10rem;" width="80%" height="80%" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div class="swiper-slide" >
+                <h1 class="text-center mt-5">Batman Trailor</h1>
+                <iframe style="margin-left: 10rem;" width="80%" height="80%" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div class="swiper-slide" >
+                <h1 class="text-center mt-5">Batman Trailor</h1>
+                <iframe style="margin-left: 10rem;" width="80%" height="80%" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+
+              <div class="swiper-slide" >
+                <h1 class="text-center mt-5">Batman Trailor</h1>
+                <iframe style="margin-left: 10rem;" width="80%" height="80%" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
         
-        <div class="container">
+        <!-- <div class="container">
 
             <img class="img-fluid" src="https://university-marketing.cofc.edu/social-media/images/banner-youtube.jpg" alt="">
 
@@ -70,7 +113,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/NLOp_6uPccQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
             </div>
         </div>
 
@@ -130,10 +173,31 @@
         </div>
 
         
-        </div>
+        </div> -->
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                });
+        </script>
     </body>
 </html>
