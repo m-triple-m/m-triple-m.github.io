@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <style>
+        body{
+            background: url('https://i.pinimg.com/originals/6b/0e/c5/6b0ec57aa65c37d0bcc96dc186a2b06a.jpg') no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+            -webkit-transform: perspective(900px);
+            -webkit-transform-style: preserve-3d;   
+        }
+
+        .swiper-container {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        }
+
+        .swiper-slide {
+        font-size: 18px;
+        color: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 40px 60px;
+        }
+
+        .parallax-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        }
+
+        .swiper-slide .title {
+        font-size: 41px;
+        font-weight: 300;
+        }
+
+        .swiper-slide .subtitle {
+        font-size: 21px;
+        }
+
+        .swiper-slide .text {
+        font-size: 14px;
+        max-width: 400px;
+        line-height: 1.3;
+        }
+
+        .card{
+            /* transform: rotateX(10deg) translateY(-50px) translateZ(-50px); */
+            transition-duration: 500ms;
+        }
+
+        .card:hover{
+            transform: rotateX(0deg) translateZ(100px);
+        }
+        
+        .mybtn{
+            padding: 0.4rem 1rem;
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.144);
+            border-color: white;
+            border-style: solid;
+            border-radius: 2px;
+            color: white;
+            background-color: transparent;
+        }
+
+        .mybtn-filled{
+            background-color: white;
+            color: black;
+        }
+
+        .mybtn-long{
+            padding: 0.4rem 4rem;
+        }
+
+        .mybtn-gr{
+            background: linear-gradient(to right bottom, purple, black);
+        }
+        
+        footer{
+            padding: 20px;
+            /* background-image: linear-gradient(to bottom, rgb(114, 65, 121), rgb(45, 28, 58)); */
+            background-color: rgba(0, 0, 0, 0.233);
+            margin-top: 100px;
+        }
+
+        .footer-content{
+            color: white;
+        }
+
+        .footer-content p{
+            text-align: left;
+        }
+
+        .pr{
+            /* position: absolute; */
+        }
+
+        @media screen and (max-width: 1000px) {
+            .card:hover{
+                transform: rotateX(0deg) translateZ(40px);
+            }
+
+            .card{
+                margin-top: 5rem;
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .hed{
+                margin-top: 4rem;
+            }
+            
+        }
+    </style>
+
+</head>
+  <body>
+      
+    <header class="container-fluid text-white">
+
+        <!-- <nav class="navbar navbar-expand-lg mt-2 " style="background-color: transparent;">
+            <a class="navbar-brand text-white" href="#">
+                <h2><img style="width: 3.4rem;" src="logo.png" alt="">digipodium</h2>
+            </a>
+            <button class="navbar-toggler mybtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto ml-auto">
+                <li class="nav-item active mr-5">
+                  <a class="nav-link text-white" href="#"><h5>Home</h5><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mr-5">
+                    <a class="nav-link text-white" href="#"><h5>About</h5><span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active mr-5">
+                    <a class="nav-link text-white" href="#"><h5>Courses</h5><span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active mr-5">
+                    <a class="nav-link text-white" href="#"><h5>Special</h5><span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <button class="mybtn">Login</button>
+                <button class="mybtn mybtn-filled ml-3">Signup</button>
+              </form>
+            </div>
+          </nav> -->
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img style="height: 3rem;" src="https://m-triple-m.github.io/sophomore/logo.png" alt="">
+                <h3>Digipodium</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+        <!-- <div class="my-navbar row mt-5 mb-3">
+            <div class="col-1"></div>
+            <div class="col-2 my-auto">
+                <h1><img style="width: 3.4rem;" src="logo.png" alt="">digipodium</h1>
+            </div>
+            <div class="col-1 my-auto"></div>
+            <div class="col-1 my-auto">
+                <h5>Home</h5>
+            </div>
+            <div class="col-1 my-auto">
+                <h5>About</h5>
+            </div>
+            <div class="col-1 my-auto">
+                <h5>Courses</h5>
+            </div>
+            <div class="col-1 my-auto">
+                <h5>Special</h5>
+            </div>
+
+            <div class="col-2 my-auto"></div>
+            <div class="col-2 my-auto">
+                <div class="row">
+                    
+                </div>
+                
+            </div>
+            <div class="col-1 my-auto">
+
+            </div>
+        </div> -->
+
+        <div class="text-center hed" >
+            <p class="mt-5 display-4">digipodium <strong>Sophomore</strong></p>
+            <p class="">Where you study with fun!!</p>
+            <button class="mt-2 mybtn mybtn-filled mybtn-long">Start Learning with Sophomore</button>
+        </div>
+        <!-- <div class="row">
+            <div>
+                <h3>Digipodium</h3>
+                <h1>Sophomore</h1>
+                <button>Start Now!</button>
+            </div>
+            <div class="header-content">
+                <img style="height: 400px;" src="https://pngimg.com/uploads/student/student_PNG62518.png" alt="">
+            </div>
+        </div> -->
+    </header>
+
+    <!-- <img class="w-100" src="back.png" alt=""> -->
+    <div id="scene">
+        <div data-depth="0.1">
+            <img class="w-100 pr" src="../parallax/img4.png" alt="">
+        </div>
+        <div data-depth="0.6">
+            <img class="w-100 pr" src="../parallax/img1.png" alt="">
+        </div>
+        <div data-depth="0.9">
+            <img class="w-100 pr" src="../parallax/img2.png" alt="">
+        </div>
+        <div data-depth="0.4">
+            <img class="w-100 pr" src="../parallax/img3.png" alt="">
+        </div>
+        
+      </div>
+
+    <div class="bg-white">
+        <div class="container bg-white">
+            <section id="mid-section">
+    
+                <div class="row justify-content-between">
+        
+                    <div class="col-md-4">
+                        <div class="card shadow-lg">
+                            <img class="card-img-top" src="https://good2bsocial.com/wp-content/uploads/2019/05/shutterstock_1128653108-1024x605.jpg" alt="">
+                            <div class="card-body">
+                                <h3>Web Development</h3>
+                                <p>Learn to create the most demanded reponsive and interactive websites.</p>
+                                <button class="mybtn mybtn-filled btn-block">Learn More!!</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="card shadow-lg">
+                            <img class="card-img-top" src="https://miro.medium.com/max/840/1*RJMxLdTHqVBSijKmOO5MAg.jpeg" alt="">
+                            <div class="card-body">
+                                <h3>Python Programming</h3>
+                                <p>Get into the most wanted and easiest Programming Language.</p>
+                                <button class="mybtn mybtn-filled btn-block">Learn More!!</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="card shadow-lg">
+                            <img class="card-img-top" src="https://digitalcruise.in/wp-content/uploads/2019/10/social-media-marketing.jpg" alt="">
+                            <div class="card-body">
+                                <h3>Social Media Marketing</h3>
+                                <p>Learn to create ads and market on most Popular Social Media Platforms.</p>
+                                <button class="mybtn mybtn-filled btn-block">Learn More!!</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </section>
+        </div>
+
+        <p style="margin-top: 10rem;" class="display-4 text-center">What Parents Say</p>
+        <hr>
+
+        <div class="swiper-container mt-5" >
+            <div class="parallax-bg" style="background-image:url('https://i.pinimg.com/originals/b4/bf/af/b4bfafa2dccc4cf3fe24f774b3f13b12.jpg')" data-swiper-parallax="-23%"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="" src="../pic01.jpg" alt="">
+                <div class="title" data-swiper-parallax="-300">Ashley Graham</div>
+                <div class="subtitle" data-swiper-parallax="-200">My children learned a lot</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="../pic02.jpg" alt="">
+                <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Ada Wong</div>
+                <div class="subtitle" data-swiper-parallax="-200">Children are very confident after learning coding</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../pic03.jpg" alt="">
+                <div class="title" data-swiper-parallax="-300">Leon S Kennedy</div>
+                <div class="subtitle" data-swiper-parallax="-200"></div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>Honestly, I Don't want to give any review. But One thing I can say that this is a random review.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            </div>
+
+    <footer>
+        <div class="my-row">
+            <div class="footer-content">
+                <h3>Sophomore Programmes</h3>
+                <p>Web Development</p>
+                <p>Python Programming</p>
+                <p>Social Media Marketing</p>
+            </div>
+            <div class="footer-content">
+                <h3>Other Programmes</h3>
+                <p>IT Training</p>
+                <p>Digital Marketing Service</p>
+                <p>Event Management</p>
+
+                <h3 style="margin-top: 20px;">
+                    <a style="color: burlywood;" href="contactus.html">Contact Us</a>
+                </h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+
+        var swiper = new Swiper('.swiper-container', {
+            speed: 600,
+            parallax: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            });
+
+        document.getElementById('btn1').onclick = function(){
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'warning'
+                )
+        }
+
+        
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

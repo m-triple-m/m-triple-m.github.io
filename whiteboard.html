@@ -2,8 +2,15 @@
 <html>
     <head>
 
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         <style>
 
+            body{
+                position: relative;
+                height: 100%;
+            }
 
             .myrow{
                 display: flex;
@@ -21,402 +28,481 @@
                 /* border: 1px solid black; */
             }
 
-        </style>
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                }
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                .swiper-slide {
+                    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.37);
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                margin-bottom: 2rem;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                }
+        </style>
 
     </head>
 
     <body style="background-color: gray;">
 
-        <div style="text-align:center;color:white">
-            <div class="card-body">
-                <p class="display-4 text-center">Digital Pixel Art Book</p>
-                <h4 id="target">Select the Color in the palate below and start drawing by clicking on board</h4>
-                <!-- <a href="https://www.google.com/search?q=pixel+art&sxsrf=ALeKk00rwETysI2nTlC-627A2ILcuHZ7Mw:1597666748580&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiT15K4nKLrAhUOzTgGHbvOAmIQ_AUoAXoECBQQAw&cshid=1597667007684189&biw=1745&bih=915" style="font-size: 2rem;background-color: yellow;" target="_blank">Example</a> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.253);border-radius: 0px 0px 5px 5px;">
+            <a class="navbar-brand text-danger" href="home.html">Sophomore Web Dev Demo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="whiteboard.html">Digital Pixel Art Book</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="project.html">Movie Search</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </div>
+          </nav>
 
-        <!-- <div class="myrow" id="target-row">
+        <div style="background-image: linear-gradient(to bottom, rgb(240, 240, 240), rgb(100, 237, 255));" class="mt-3">
+            <div style="text-align:center;color:white;">
+                <div class="card-body">
+                    <p class="display-4 text-center" id="type" style="font-weight: bold;color: blueviolet;">Digital Pixel Art Book</p>
+                </div>
+            </div>
+    
+            <!-- <div class="myrow" id="target-row">
+                
+            </div> -->
+
             
-        </div> -->
+    
+            <div class="container-fluid">
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="examples">
-                        <div class="card shadow-lg" style="height:48rem;overflow:auto;">
-                            <div class="card-body text-center">
-                                <p class="h3">Draw the following examples</p>
-                                <img class=" mt-5 img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzxYleQrYVPML0fDt_dTc-EocZcujRTUJJ_Q&usqp=CAU" alt="">
-                                <img class=" mt-5 " style="width: 20rem;margin-left: auto;margin-right: auto;" src="https://lh3.googleusercontent.com/Ffm81RfHt78H3K_VPHl6NEXMP-yHt0-wu6LiPnxo727C0RVdy6cSdlgnMLwAVSEA7WTl" alt="">
-                                <img class=" mt-5 img-fluid" src="https://pngimage.net/wp-content/uploads/2018/06/retrogaming-png-1.png" alt="">
-                                <img class=" mt-5 img-fluid" src="https://lh3.googleusercontent.com/proxy/VB_ufzhA3u9sDFVLJYggGRq8eCAh-pYfEAIBF31tUZcmUrcppSfEBawqw9jOL-1PPEt3IjkzswH_2lfCWrdPZkG56jmuBZzA" alt="">
+                <div class="swiper-container mb-5">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+
+                        <img class="mt-5 mb-5 img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzxYleQrYVPML0fDt_dTc-EocZcujRTUJJ_Q&usqp=CAU" alt="">
+
+                      </div>
+                      <div class="swiper-slide">
+
+                        <img class=" mt-3 " style="width: 19rem;margin-left: auto;margin-right: auto;" src="https://lh3.googleusercontent.com/Ffm81RfHt78H3K_VPHl6NEXMP-yHt0-wu6LiPnxo727C0RVdy6cSdlgnMLwAVSEA7WTl" alt="">
+
+                      </div>
+                      <div class="swiper-slide">
+
+                        <img class="" style="height: 20rem;" src="https://pngimage.net/wp-content/uploads/2018/06/retrogaming-png-1.png" alt="">
+
+                      </div>
+                      <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                      <div class="swiper-slide">Slide 10</div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="h2 text-center">Select Color Here</p>
+                                <hr>
+                                <input type="color" id="col" class="text-center">
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-1">
-                    <input type="color" id="col" style="">
-                </div>
-                <div class="col-md-8">
-                    <div class="board">
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                        </div>
-                
-                
-                        <div class="myrow">
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
-                            <div class="box"></div>
+                    <div class="col-md-8">
+                        <div class="board">
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                    
+                    
+                            <div class="myrow">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -428,6 +514,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="core.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
         <script>
 
             
@@ -438,42 +526,60 @@
             let div_element = document.getElementById('target-row');
             
             let boxes_to_insert = 20;
+
             // for(let i=0;i<boxes_to_insert;i++){
             //     div_element.innerHTML += '<div class="box"></div>'
             // }
+
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
 
             let all_divs = document.getElementsByClassName('box');
 
                 for(let i=0;i<all_divs.length;i++){
 
-                    all_divs[i].onclick = function(e){
-                        var sel_color = document.getElementById('col').value;
-                        console.log(e.target);
-                        e.target.style.backgroundColor = sel_color;
+                    let mouse_d = false;
+
+                    // all_divs[i].onmousedown = function(e){
+                    //     mouse_d = true;
+                    // }
+
+                    // all_divs[i].onmouseup = function(e){
+                    //     mouse_d = false;
+                    // }
+
+                    all_divs[i].onmouseenter = function(e){
+                        if(mouse_d){
+                            var sel_color = document.getElementById('col').value;
+                            console.log(e.target);
+                            e.target.style.backgroundColor = sel_color;
+                        }
                     };
 
                 }
+
+            var demo = document.getElementById('type');
+
+            const typewriter = new Typewriter('#type', {
+                loop: true,
+                });
+
+                typewriter.typeString('Digital Pixel Art Book!')
+                .pauseFor(2500)
+                .deleteAll()
+                .typeString('Made By Javascript')
+                .pauseFor(2500)
+                .deleteChars(10)
+                .typeString('<strong>Digipodium Sophomores!<strong>')
+                .pauseFor(2500)
+                .start();
             
         </script>
     </body>
-</html>
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    
-  </head>
-  <body>
-      
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
-  </body>
 </html>

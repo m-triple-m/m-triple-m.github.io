@@ -10,93 +10,167 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <style>
     body {
-      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEACAYseK891R3DmLQ9qzzAVxmJ4DNqwXkfQ&usqp=CAU');
+      background-image: url('https://miro.medium.com/max/4096/1*UW4OeCzTND9q3KIZWXgTiA.jpeg');
       background-size: cover;
       background-repeat: no-repeat;
       height: 100vh;
+      font-family: Alata;
     }
 
     #result{
-      height: 0px;
+      /* height: 0px; */
       overflow: hidden;
-      transition-duration: 1s;
+      transition-duration: 400ms;
+    }
+
+    #result:hover{
+      transform: scale(1.05) rotateZ(-3deg) translateY(-70px);
+      background-color: rgba(0, 22, 56) !important;
+      box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, 0.26);
+    }
+
+    #title{
+      font-size: 50px;
+      /* font-weight: bolder; */
+      color: white;
+      margin-bottom: 0px;
+
+    }
+
+    #plot{
+      color: rgb(255, 255, 255);
+    }
+
+    #genre{
+      color: rgb(1, 153, 255);
+      font-size: 30px;
+      margin-bottom: 0px;
+      /* font-weight: bolder; */
+    }
+
+    #production{
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    #release-label, #runtime-label, #boxoffice-label, #rating-label{
+      font-size: 20px;
+      color: white;
+      margin-bottom: 0px;
+    }
+    
+    #released, #runtime, #boxoffice, #rating{
+      color: rgb(1, 153, 255);
+      font-size: 30px;
     }
 
     .project-title{
       text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 40px;
-      color: white;
-      font-weight: bolder;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      font-size: 70px;
+      color: rgb(1, 225, 255);
+      font-weight: lighter;
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
+      padding-top: 20px;
+      background-color: rgba(0, 0, 0, 0.65);
     }
-
   </style>
 </head>
 
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 22, 56);box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.253);border-radius: 0px 0px 15px 15px;">
+    <a class="navbar-brand text-white" href="home.html">Sophomore Web Dev Demo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav text-light">
+        <li class="nav-item active" >
+          <a class="nav-link" style="color: aquamarine;" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: aquamarine;" href="whiteboard.html">Digital Pixel Art Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: aquamarine;" href="project.html">Movie Search</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: aquamarine;" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <p class="project-title">Search My Movie</p>
 
   <div class="container">
-    <div class="card mt-5">
+    <div class="card mt-5" style="background-color: rgba(0, 22, 56, 0.904);">
       <div class="card-body">
-        <h3 class="text-center">Enter a Movie Name here</h3>
+        <h3 class="text-center" style="color:rgb(1, 153, 255);">Enter a Movie Name to Continue</h3>
         <hr>
-        <input class="form-control" placeholder="Movie Name" id="name">
-        <button id="search" class="btn btn-danger mt-4">Search</button>
-      </div>
-    </div>
-
-    <div id="result" class="card mt-5">
-      <div class="card-body">
-        <p class="display-4 text-center">Movie Details</p>
-        <hr>
-
-        <div class="text-center">
-          <img class="img-fluid" id="img">
-        </div>
-        
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <p class="h3">Title : </p>
-          </div>
-          <div class="col-md-8">
-            <p class="h4" id="title"></p>
-          </div>
-        </div>
-
-        <div class="row mt-3">
-          <div class="col-md-4">
-            <p class="h3">Year : </p>
-          </div>
-          <div class="col-md-8">
-            <p class="h4" id="year"></p>
-          </div>
-        </div>
-
-        <div class="row mt-3">
-          <div class="col-md-4">
-            <p class="h3">Rated : </p>
-          </div>
-          <div class="col-md-8">
-            <p class="h4" id="rated"></p>
-          </div>
-        </div>
-
-        <div class="row mt-3">
-          <div class="col-md-4">
-            <p class="h3">Genre : </p>
-          </div>
-          <div class="col-md-8">
-            <p class="h4" id="genre"></p>
+        <div class="input-group"> 
+          <input class="form-control" placeholder="Movie Name" id="name" style="background-color: transparent;color: white;">
+          <div class="input-group-append">
+            <button id="search" class="btn btn-primary"><i class="fa fa-search"></i></button>
           </div>
         </div>
 
       </div>
+    </div>
+
+    <div id="result" class="card mt-1" style="background-color: rgba(0, 22, 56, 0.904);height: 0px;">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="card-img-top" id="img">
+        </div>
+        <div class="col-md">
+          <div class="card-body">
+
+            <p id="title"></p>
+            <p id="plot"></p>
+            <p id="genre"></p>
+            <p id="production"></p>
+            <div class="row">
+              <div class="col">
+                <p id="release-label"></p>
+                <p id="released"></p>
+              </div>
+              <div class="col">
+                <p id="runtime-label"></p>
+                <p id="runtime"></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <p id="boxoffice-label"></p>
+                <p id="boxoffice"></p>
+              </div>
+              <div class="col">
+                <p id="rating-label"></p>
+                <p id="rating"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -109,6 +183,8 @@
     var xhr = new XMLHttpRequest();
 
     // Setup our listener to process completed requests
+
+    // this function is responsible for "what will happen when request is sent"
     xhr.onload = function () {
 
       // Process our return data
@@ -117,17 +193,22 @@
         // console.log('success!', xhr);
         data = xhr.response;
         data = JSON.parse(data);
-        console.log(data.Actors);
+        console.log(data);
 
 
         document.getElementById('img').setAttribute('src', data.Poster);
         document.getElementById('title').innerHTML = data.Title;
-        document.getElementById('year').innerHTML = data.Year;
-        document.getElementById('rated').innerHTML = data.Rated;
+        document.getElementById('plot').innerHTML = data.Plot;
+        document.getElementById('released').innerHTML = data.Released;
+        document.getElementById('production').innerHTML = data.Production;
         document.getElementById('genre').innerHTML = data.Genre;
+        document.getElementById('released').innerHTML = data.Released;
+        document.getElementById('runtime').innerHTML = data.Runtime;
+        document.getElementById('boxoffice').innerHTML = data.BoxOffice;
+        document.getElementById('rating').innerHTML = data.imdbRating;
 
 
-        document.getElementById('result').style.height = '850px';
+        document.getElementById('result').style.height = 'max-content';
 
       } else {
         // What do when the request fails
@@ -139,7 +220,7 @@
     };
 
 
-    getDetails = (name, year) => {
+    getDetails = (name) => {
 
       // ye code request create kr ke send kr dega
       xhr.open('GET', 'http://www.omdbapi.com/?t=' + name + '&plot=full&apikey=2467ae4b');
@@ -152,7 +233,7 @@
     mybtn.onclick = function(){
       let movie_name = document.getElementById('name').value;
       console.log(movie_name);
-      getDetails(movie_name, 2010);
+      getDetails(movie_name);
     }
 
   </script>

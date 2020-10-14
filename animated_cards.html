@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+
+    <style>
+
+            *{
+                font-family: alata;
+            }
+
+            body{
+                height: 100vh;
+                background-image: linear-gradient(to bottom, white,rgb(177, 177, 177));
+            }
+
+        .my-cards{
+                margin-top: 50px;
+                margin-bottom: 100px;
+                margin-left: 250px;
+                display: flex;
+
+            }
+
+            .min-cards{
+                height: 500px;
+                width: 270px;
+                background-color: rgb(49, 49, 49);
+                border-radius: 10px;
+                margin-left: -70px;
+                border: 1px solid rgb(197, 98, 18);
+                transition-duration: 400ms;
+                color: white;
+                box-shadow: -10px 50px 100px 3px rgba(0, 0, 0, 0.164);
+            }
+
+            .min-cards:hover{
+                transform: translateX(-80px) translateY(-50px) rotateZ(-10deg) scale(1.1) rotate3d(1, 5, 5, 20deg);
+                box-shadow: 50px 110px 100px 3px rgba(0, 0, 0, 0.664);
+            }
+
+            .min-card-image{
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            input{
+                width: 700px;
+                height: 60px;
+                font-size: 30px;
+                border-radius: 40px;
+                padding: 10px 30px;
+                border: none;
+                margin: 0 auto;
+                display: block;
+                box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.301);
+                /* transition-duration: 700ms; */
+                transition-property: all;
+            }
+
+            input:hover{
+                
+                border: 2px solid rgba(0, 0, 0, 0.247);
+                box-shadow: inset 2px 2px 4px 2px rgba(0, 0, 0, 0.301);
+            }
+
+            input:focus{
+                outline: none;
+            }
+
+            .con{
+                width: 95%;
+                margin: 0 auto;
+            }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+      
+    <div class="con">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.253);border-radius: 0px 0px 5px 5px;">
+            <a class="navbar-brand text-danger" href="home.html">Sophomore Web Dev Demo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="whiteboard.html">Digital Pixel Art Book</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="project.html">Movie Search</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <div class="card mt-5 shadow-lg" style="border-radius: 5px;">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <!-- <img style="height: 15rem;" src="https://icons-for-free.com/iconfiles/png/512/film+reel+movie+reel+icon-1320087274785277497.png" alt=""> -->
+                    </div>
+                    <div class="col-6">
+                        
+                    </div>
+                </div>
+                
+                <p class="display-4 text-center text-danger" style="font-weight: bolder;">My Magnificent Seven</p>
+            
+                <div style="text-align: center;margin-left: 30%;">
+                    <input placeholder="Enter Movie Name">
+                </div>
+
+                <hr>
+            
+                <div class="my-cards">
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>Inception</h3>
+                            <h5>Rating : 9.3 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://images-na.ssl-images-amazon.com/images/I/91ebheNmoUL._RI_.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>The Dark Knight</h3>
+                            <h5>Rating : 7.8 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>Shawshank Redemption</h3>
+                            <h5>Rating : 9.5 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>Avengers Endgame</h3>
+                            <h5>Rating : 8.3 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_%282016_poster%29.png" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>Deadpool</h3>
+                            <h5>Rating : 7.2 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>X-Men_-_Apocalypse</h3>
+                            <h5>Rating : 6.8 Stars</h5>
+                        </div>
+                    </div>
+                    <div class="min-cards">
+                        <img class="min-card-image" src="https://images-na.ssl-images-amazon.com/images/I/81%2BNup8-8NL._SL1500_.jpg" alt="">
+                        <div style="padding: 0px 10px;">
+                            <h3>Avengers Endgame</h3>
+                            <h5>Rating : 8.3 Stars</h5>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
