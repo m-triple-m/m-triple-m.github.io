@@ -1,583 +1,723 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!doctype html>
+<html lang="en">
 
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <title>Digital Pixel ArtBook</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" />
 
-        <style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
-            body{
-                position: relative;
-                height: 100vh;
-            }
 
-            .myrow{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                width: 900px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+    <style>
+        .myrow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-            .box{
-                height: 45px;
-                width: 50px;
-                background-color: white;
-                /* border: 1px solid black; */
-            }
+        .box {
+            height: 45px;
+            width: 50px;
+            background-color: white;
+            /* border: 1px solid black; */
+        }
 
-            .swiper-container {
-                width: 100%;
-                height: 100%;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.37);
+            text-align: center;
+            font-size: 18px;
+            height: 22rem;
+            background: #fff;
+            margin-bottom: 2rem;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        #type {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .slider-img{
+            width: 20rem;
+            height: 20rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+                  
+            .myrow {
+                width: 400px;
                 }
 
+                .box {
+                    height: 20px;
+                    width: 50px;
+                }
                 .swiper-slide {
-                    box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.37);
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                margin-bottom: 2rem;
-
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
+                    height: 7rem;
                 }
-        </style>
 
-    </head>
+                .slider-img{
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+    </style>
 
-    <body style="background-image: linear-gradient(to bottom, rgb(240, 240, 240), rgb(100, 237, 255));background-size: cover;background-attachment: fixed;">
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.253);border-radius: 0px 0px 5px 5px;">
-            <a class="navbar-brand text-danger" href="home.html">Sophomore Web Dev Demo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
+<body
+    style="background-image: linear-gradient(to bottom, rgb(240, 240, 240), rgb(100, 237, 255));background-size: cover;background-attachment: fixed;">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+        style="box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.253);border-radius: 0px 0px 5px 5px;">
+        <a class="navbar-brand text-danger" href="home.html">Sophomore Web Dev Demo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                
-              </ul>
-            </div>
-          </nav>
 
-        <div style="" class="mt-3">
-            <div style="text-align:center;color:white;">
+            </ul>
+        </div>
+    </nav>
+
+    <div style="text-align:center;color:white;">
+        <div class="card-body">
+            <p class="text-center" id="type" style="color: blueviolet;">Digital Pixel Art Book</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="swiper-container mb-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                    <img class="mt-5 mb-5 img-fluid"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzxYleQrYVPML0fDt_dTc-EocZcujRTUJJ_Q&usqp=CAU"
+                        alt="">
+
+                </div>
+                <div class="swiper-slide">
+
+                    <img class="slider-img mt-3 " style="margin-left: auto;margin-right: auto;"
+                        src="https://lh3.googleusercontent.com/Ffm81RfHt78H3K_VPHl6NEXMP-yHt0-wu6LiPnxo727C0RVdy6cSdlgnMLwAVSEA7WTl"
+                        alt="">
+
+                </div>
+                <div class="swiper-slide">
+
+                    <img class="slider-img"
+                        src="https://pngimage.net/wp-content/uploads/2018/06/retrogaming-png-1.png" alt="">
+
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-img"
+                        src="https://i.pinimg.com/originals/ea/13/a6/ea13a6a6620e975126f714994d1dd907.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-img"
+                        src="https://img.favpng.com/24/15/16/pixel-art-drawing-png-favpng-pL6dxutWHXZAqNwsT27wSZhPU.jpg"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-img"
+                        src="https://i.pinimg.com/originals/7e/29/38/7e29384c5be4f677c42ff3da1c5ee02a.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-img"
+                        src="https://preview.pixlr.com/images/800wm/100/1/1001468596.jpg"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="slider-img"
+                        src="https://www.kindpng.com/picc/m/20-201346_transparent-lightning-bolt-lightning-pixel-art-transparent-hd.png"
+                        alt="">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="card">
                 <div class="card-body">
-                    <p class="display-4 text-center" id="type" style="font-weight: bold;color: blueviolet;">Digital Pixel Art Book</p>
-                </div>
-            </div>
-    
-            <!-- <div class="myrow" id="target-row">
-                
-            </div> -->
-
-            
-    
-            <div class="container-fluid">
-
-                <div class="swiper-container mb-5">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-
-                        <img class="mt-5 mb-5 img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzxYleQrYVPML0fDt_dTc-EocZcujRTUJJ_Q&usqp=CAU" alt="">
-
-                      </div>
-                      <div class="swiper-slide">
-
-                        <img class=" mt-3 " style="width: 19rem;margin-left: auto;margin-right: auto;" src="https://lh3.googleusercontent.com/Ffm81RfHt78H3K_VPHl6NEXMP-yHt0-wu6LiPnxo727C0RVdy6cSdlgnMLwAVSEA7WTl" alt="">
-
-                      </div>
-                      <div class="swiper-slide">
-
-                        <img class="" style="height: 20rem;" src="https://pngimage.net/wp-content/uploads/2018/06/retrogaming-png-1.png" alt="">
-
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="" style="height: 20rem;" src="https://i.pinimg.com/originals/ea/13/a6/ea13a6a6620e975126f714994d1dd907.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="" style="height: 20rem;" src="https://img.favpng.com/24/15/16/pixel-art-drawing-png-favpng-pL6dxutWHXZAqNwsT27wSZhPU.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="" style="height: 20rem;" src="https://i.pinimg.com/originals/7e/29/38/7e29384c5be4f677c42ff3da1c5ee02a.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="" style="height: 20rem;" src="https://lh3.googleusercontent.com/proxy/RRbUc_7Dgsp2D-F45xcI66H5Ro6uGhi4uPrPqtz_DakbcQ25yuEPcXYkCDnVg7WbqcYDY4TIgvYvdL0wx2of5qru77v8pwbU" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="" style="height: 20rem;" src="https://www.kindpng.com/picc/m/20-201346_transparent-lightning-bolt-lightning-pixel-art-transparent-hd.png" alt="">
-                      </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                  </div>
-
-                <div class="row justify-content-center">
-                    
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <p class="h2 text-center">Select Color Here</p>
-                                    </div>
-                                    <div class="col-md-2 my-auto">
-                                        <input type="color" id="col" class="text-center">
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <p class="h2 text-center">Select Color Here</p>
                         </div>
-                    </div>
-                    
-                </div>
-
-                <div class="board">
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-            
-            
-                    <div class="myrow">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box"></div>
+                        <div class="col-2 my-auto">
+                            <input type="color" id="col" class="text-center">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-        <script src="core.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-        <script>
+    <div class="board">
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            let target_element = document.getElementById('target');
-            // target_element.innerHTML = "Pixel Art Website!!";
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            let div_element = document.getElementById('target-row');
-            
-            let boxes_to_insert = 20;
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            // for(let i=0;i<boxes_to_insert;i++){
-            //     div_element.innerHTML += '<div class="box"></div>'
-            // }
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            let all_divs = document.getElementsByClassName('box');
 
-                for(let i=0;i<all_divs.length;i++){
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-                    let mouse_d = false;
 
-                    // all_divs[i].onmousedown = function(e){
-                    //     mouse_d = true;
-                    // }
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-                    // all_divs[i].onmouseup = function(e){
-                    //     mouse_d = false;
-                    // }
 
-                    all_divs[i].onclick = function(e){
-                       
-                            var sel_color = document.getElementById('col').value;
-                            console.log(e.target);
-                            e.target.style.backgroundColor = sel_color;
-                        
-                    };
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-                }
 
-            var demo = document.getElementById('type');
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
 
-            const typewriter = new Typewriter('#type', {
-                loop: true,
-                });
 
-                typewriter.typeString('Digital Pixel Art Book!')
-                .pauseFor(2500)
-                .deleteAll()
-                .typeString('Made By Javascript')
-                .pauseFor(2500)
-                .deleteChars(10)
-                .typeString('<strong>Digipodium Sophomores!<strong>')
-                .pauseFor(2500)
-                .start();
-            
-        </script>
-    </body>
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+
+        <div class="myrow">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="core.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        let all_divs = document.getElementsByClassName('box');
+
+        for (let i = 0; i < all_divs.length; i++) {
+
+            all_divs[i].onclick = function (e) {
+
+                var sel_color = document.getElementById('col').value;
+                console.log(e.target);
+                e.target.style.backgroundColor = sel_color;
+
+            };
+
+        }
+
+        var demo = document.getElementById('type');
+
+        const typewriter = new Typewriter('#type', {
+            loop: true,
+        });
+
+        typewriter.typeString('Digital Pixel Art Book!')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Made By Javascript')
+            .pauseFor(2500)
+            .deleteChars(10)
+            .typeString('<strong>Digipodium Sophomores!<strong>')
+            .pauseFor(2500)
+            .start();
+    </script>
+</body>
+
 </html>
