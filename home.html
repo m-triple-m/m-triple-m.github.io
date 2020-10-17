@@ -65,12 +65,14 @@
         }
 
         .card{
-            /* transform: rotateX(10deg) translateY(-50px) translateZ(-50px); */
-            transition-duration: 500ms;
+            transform: rotateZ(-4deg) translateY(-100px) translateZ(-50px);
+            transition-duration: 300ms;
+            box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.281);
         }
 
         .card:hover{
-            transform: rotateX(0deg) translateZ(100px);
+            transform: rotateX(0deg) translateZ(200px);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.281);
         }
         
         .mybtn{
@@ -111,8 +113,8 @@
             text-align: left;
         }
 
-        .pr{
-            /* position: absolute; */
+        .he:hover{
+            transform: translateX(10px);
         }
 
         @media screen and (max-width: 1000px) {
@@ -130,6 +132,10 @@
             .hed{
                 margin-top: 4rem;
             }
+
+            /* .i4{
+                width: 1000px;
+            } */
             
         }
     </style>
@@ -164,18 +170,18 @@
     </header>
 
     <!-- <img class="w-100" src="back.png" alt=""> -->
-    <div id="scene">
+    <div id="scene" style="overflow-x: hidden;">
         <div data-depth="0.1">
-            <img class="w-80 pr" style="margin-bottom: -10rem;margin-left: -40rem;" src="parallax/img4.png" alt="">
+            <img class="w-100 pr" src="parallax/img4.png" alt="">
         </div>
         <div data-depth="2">
             <img class="w-100 pr" src="parallax/img1.png" alt="">
         </div>
-        <div data-depth="0.4">
-            <img class="w-80 pr" style="margin-bottom: -50rem;margin-left: -25rem;" src="parallax/img4.png" alt="">
+        <div data-depth="0.2">
+            <img class="w-100 " src="parallax/img6.png" alt="">
         </div>
-        <div data-depth="0.8">
-            <img class="w-80 pr" style="margin-bottom: -20rem;margin-left: 25rem;" src="parallax/img4.png" alt="">
+        <div data-depth="0.1">
+            <img class="w-100 " src="parallax/img7.png" alt="">
         </div>
         <div data-depth="1.8">
             <img class="w-100 pr" src="parallax/img3.png" alt="">
@@ -185,7 +191,6 @@
         </div>
         
       </div>
-
     <div class="bg-white">
         <div class="container bg-white">
             <section id="mid-section">
@@ -193,7 +198,7 @@
                 <div class="row justify-content-between">
         
                     <div class="col-md-4">
-                        <div class="card shadow-lg">
+                        <div class="cd card">
                             <img class="card-img-top" src="https://good2bsocial.com/wp-content/uploads/2019/05/shutterstock_1128653108-1024x605.jpg" alt="">
                             <div class="card-body">
                                 <h3>Web Development</h3>
@@ -204,7 +209,7 @@
                     </div>
         
                     <div class="col-md-4">
-                        <div class="card shadow-lg">
+                        <div class="card">
                             <img class="card-img-top" src="https://miro.medium.com/max/840/1*RJMxLdTHqVBSijKmOO5MAg.jpeg" alt="">
                             <div class="card-body">
                                 <h3>Python Programming</h3>
@@ -215,7 +220,7 @@
                     </div>
         
                     <div class="col-md-4">
-                        <div class="card shadow-lg">
+                        <div class="card">
                             <img class="card-img-top" src="https://digitalcruise.in/wp-content/uploads/2019/10/social-media-marketing.jpg" alt="">
                             <div class="card-body">
                                 <h3>Social Media Marketing</h3>
@@ -230,7 +235,7 @@
             </section>
         </div>
 
-        <p style="margin-top: 10rem;" class="display-4 text-center">What Parents Say</p>
+        <p style="margin-top: 5rem;" class="display-4 text-center">What Parents Say</p>
         <hr>
 
         <div class="swiper-container mt-5" >
