@@ -51,132 +51,207 @@
           </ul>
         </div>
       </nav>
-
+      <video width="1280" height="720" class="background" autoplay muted loop>
+        <source src="https://codepen.jonnitto.ch/BackgroundVideo.mp4" type="video/mp4">
+      </video>
       <div class="container">
         <div class="row mt-5">
-            <div class="col-md-3 bg-light text-center">
+            <!-- <div class="col-md-3 bg-light text-center">
                 <img class="w-50 mt-5" src="logo.png" alt="">
-            </div>
+            </div> -->
             <div class="col-md">
-                <div class="card">
+                <div class="card card-dec">
                     <div class="card-body">
-                        <p class="display-4 text-center">Registration Form</p>
+                      <div class="col-md"><p class="h3">Registration Form</p></div>
                         <hr>
                         <div class="container">
                             <form action="">
-                                <p class="text-muted mt-5" style="margin-bottom: 0;">Student Details</p>
-                                <div class="row group1">
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-fname" type="text" class="form-control">
-                                            <label for="st-fname">Student First Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Personal Contact</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+                                <div class="grouped">
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="email" class="form-control">
+                                        <label for="email">Email</label>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-sname" type="text" class="form-control">
-                                            <label for="st-sname">Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="fname" class="form-control">
+                                        <label for="fname">First Name</label>
+                                      </div>
                                     </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="lname" class="form-control">
+                                        <label for="lname">Last Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="number" id="contact" class="form-control">
+                                        <label for="contact">Contact Number</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="number" id="contact2" class="form-control">
+                                        <label for="contact2">Parent's/Guardian's Contact Number</label>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="number" id="whatsapp" class="form-control">
+                                        <label for="whatsapp">WhatsApp Contact for Batch</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-md"></div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="college" class="form-control">
+                                        <label for="college">School/College/Office Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <select class="browser-default custom-select">
+                                          <option selected>Year</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <select class="browser-default custom-select">
+                                          <option selected>Semester</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <select class="browser-default custom-select">
+                                          <option selected>Persuing</option>
+                                          <option value="1">B.Tech</option>
+                                          <option value="2">B.C.A.</option>
+                                          <option value="3">M.C.A</option>
+                                          <option value="4">M.B.A.</option>
+                                          <option value="5">B.Voc</option>
+                                          <option value="6">B.Com</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-    
-                                <p class="text-muted mt-5" style="margin-bottom: 0;">Course Details</p>
-                                <div class="row group1">
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-name" type="text" class="form-control">
-                                            <label for="st-name">Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+
+                                <p class="text-muted h5 mt-5" style="margin-bottom: 0;">Course Details</p>
+                                <div class="grouped">
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <select class="browser-default custom-select">
+                                          <option selected>Selected Course</option>
+                                          <option value="1">Angular 10</option>
+                                          <option value="2">Python 3</option>
+                                          <option value="3">Java 15</option>
+                                          <option value="4">Machine Learning</option>
+                                          <option value="5">Data Analytics</option>
+                                          <option value="6">Sophomore</option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="duration" class="form-control" disabled value="1.5 Months">
+                                        <label for="duration">Duration</label>
+                                      </div>
                                     </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="number" id="total-fee" class="form-control" disabled value="6000">
+                                        <label for="total-fee">Total Fee</label>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                 </div>
-                            </form>
-                        </div>
-                        <div class="container">
-                            <form action="">
-                                <p class="text-muted mt-5" style="margin-bottom: 0;">Student Details</p>
-                                <div class="row group1">
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-fname" type="text" class="form-control">
-                                            <label for="st-fname">Student First Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Personal Contact</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+
+                                <p class="text-muted h5 mt-5" style="margin-bottom: 0;">Transaction Details</p>
+                                <div class="grouped">
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="number" id="reg-amt" class="form-control" disabled value="1000">
+                                        <label for="reg-amt">Registration Amount</label>
+                                      </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-sname" type="text" class="form-control">
-                                            <label for="st-sname">Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="date" id="date" class="form-control">
+                                        <label for="date">Transaction Date</label>
+                                      </div>
                                     </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="time" id="time" class="form-control">
+                                        <label for="time">Transaction Time</label>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="bank" class="form-control">
+                                        <label for="bank">Bank Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="trns-id" class="form-control">
+                                        <label for="trns-id">Transaction ID</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="md-form">
+                                        <input type="text" id="location" class="form-control">
+                                        <label for="location">Location</label>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-    
-                                <p class="text-muted mt-5" style="margin-bottom: 0;">Course Details</p>
-                                <div class="row group1">
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" id="st-name" type="text" class="form-control">
-                                            <label for="st-name">Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <input placeholder="" type="text" class="form-control">
-                                            <label>Student Name</label>
-                                        </div>
-                                    </div>
+
+
+                                <div class="mt-5">
+                                  <div class="btn btn-lg btn-primary btn-block">Register</div>
                                 </div>
                             </form>
                         </div>

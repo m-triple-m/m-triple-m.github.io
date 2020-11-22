@@ -1,6 +1,38 @@
-.group1 {
-  border: 1px solid #858585;
-  padding: 0.5rem 3rem;
-  border-radius: 0.4rem;
+.grouped {
+  border: 1px solid #0000002f;
+  padding: 0.5rem 2rem;
+  /* border-radius: 0.7rem; */
+  box-shadow: 5px 5px 6px -6px rgba(2, 2, 2, 0.281), -5px -5px 6px -6px rgba(2, 2, 2, 0.281);
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.input-group>.input-group-prepend {
+  flex: 0 0 30%;
+}
+.input-group .input-group-text {
+  width: 100%;
+}
+
+.card-dec{
+  border-left: 3px solid rgb(0, 60, 255);
+}
+
+@media screen and (max-width: 1000px) {
+
+  .mob{
+      margin-top: -2rem;
+  }
+
 }
 /*# sourceMappingURL=style.css.map */
