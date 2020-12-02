@@ -179,58 +179,20 @@
 
   <script>
 
-
-    // Set up our HTTP request
     var xhr = new XMLHttpRequest();
-
-    // Setup our listener to process completed requests
-
-    // this function is responsible for "what will happen when request is sent"
     xhr.onload = function () {
-
-      // Process our return data
       if (xhr.status >= 200 && xhr.status < 300) {
-        // What do when the request is successful
-        // console.log('success!', xhr);
         data = xhr.response;
         data = JSON.parse(data);
         console.log(data);
-
-
-        document.getElementById('img').setAttribute('src', data.Poster);
-        document.getElementById('title').innerHTML = data.Title;
-        document.getElementById('plot').innerHTML = data.Plot;
-        document.getElementById('released').innerHTML = data.Released;
-        document.getElementById('production').innerHTML = data.Production;
-        document.getElementById('genre').innerHTML = data.Genre;
-        document.getElementById('released').innerHTML = data.Released;
-        document.getElementById('runtime').innerHTML = data.Runtime;
-        document.getElementById('boxoffice').innerHTML = data.BoxOffice;
-        document.getElementById('rating').innerHTML = data.imdbRating;
-
-
-        document.getElementById('result').style.height = 'max-content';
-
-      } else {
-        // What do when the request fails
-        console.log('The request failed!');
-      }
-
-      // Code that should run regardless of the request status
-      console.log('This always runs...');
-    };
-
+      } else console.log('The request failed!');}
 
     getDetails = (name) => {
-
-      // ye code request create kr ke send kr dega
       xhr.open('GET', 'http://www.omdbapi.com/?t=' + name + '&plot=full&apikey=2467ae4b');
       xhr.send();
     }
 
     let mybtn = document.getElementById('search');
-
-
     mybtn.onclick = function(){
       let movie_name = document.getElementById('name').value;
       console.log(movie_name);
