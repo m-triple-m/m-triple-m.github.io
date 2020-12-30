@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Digipodium Course Registration</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="col-md-10 mx-auto mb-5" id="main-con">
+    <div class="card col-md card-main bg-dark" style="border: none;">
+      <div class="row">
+        <div class="col-md-3 mx-auto text-center bg-dark text-white card-side">
+          <div class="card-body">
+            <img src="./logo2.png" class="logo" />
+
+            <div class="my-list-group">
+              <div class="my-list-group-item">
+                <p class="h4">IT Training & Development</p>
+              </div>
+              <hr />
+              <div class="my-list-group-item">
+                <p class="h4">Digital Marketing & Solutions</p>
+              </div>
+              <hr />
+              <div class="my-list-group-item">
+                <p class="h4">Sophomore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+
+          <!-- <hr /> -->
+          <div class="card card-form" style="margin: 0rem;border: none;">
+            <div class="card-body">
+              <p class="h3 text-dark" style="padding: 1.3rem;margin: 0;">Registration Form</p>
+              <hr />
+              <div class="container">
+                <form action="" method="POST" novalidate class="needs-validation">
+
+                  <div class="row">
+                    <div class="col-md-2 mt-3">
+                      <p class="h5 section-title">Student Details</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="grouped">
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" id="first" name="fname" placeholder="Name" required />
+                                <label htmlFor="first">First Name</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid first name
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" id="last" name="lname" placeholder="Name" required />
+                                <label htmlFor="last">Last Name</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid last name
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email"
+                                  required />
+                                <label htmlFor="email">Email</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid email
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" type="number" id="contact" name="contact"
+                                  placeholder="Contact" required minlength="10" />
+                                <label htmlFor="contact">Personal Contact</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid personal contact
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" type="number" id="pcontact" name="pcontact"
+                                  placeholder="Contact" required maxlength="10" minlength="10" />
+                                <label htmlFor="pcontact">Parent's/Guardian's Contact</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid Guardian's/Parent's contact
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" type="number" id="whatsapp" name="whatsapp"
+                                  placeholder="Contact" required maxlength="10" minlength="10" />
+                                <label htmlFor="whatsapp">WhatsApp Contact for Batch</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid whatsapp contact
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-group">
+                              <div class="form-floating">
+                                <input class="form-control" id="college" name="college" placeholder="College"
+                                  required />
+                                <label htmlFor="college">School/College/Office Name</label>
+                                <div class="invalid-feedback">
+                                  Please provide a valid College Name
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="pursuing" name="pursuing"
+                                aria-label="Floating label select example" required>
+                                <option value="">Select</option>
+                                <option value="1">B.Tech</option>
+                                <option value="2">B.C.A.</option>
+                                <option value="3">M.C.A</option>
+                                <option value="4">M.B.A.</option>
+                                <option value="5">B.Voc</option>
+                                <option value="6">B.Com</option>
+                              </select>
+                              <label htmlFor="pursuing">Pursuing</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Course in College
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="year" name="year"
+                                aria-label="Floating label select example" required>
+                              </select>
+                              <label htmlFor="year">Year</label>
+                              <div class="invalid-feedback">
+                                Please provide valid Year
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <select class="form-select" id="semester" name="semester"
+                                aria-label="Floating label select example" required>
+                                <option value="">Select</option>
+                              </select>
+                              <label htmlFor="semester">Semester</label>
+                              <div class="invalid-feedback">
+                                Please provide valid Semester
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="row mt-5">
+                    <div class="col-md-2">
+                      <p class="h5 section-title">Course Details</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="grouped">
+                        <div class="row">
+                          <div class="col-md">
+                            <div class="form-floating">
+                              <select class="form-select" id="course" name="course"
+                                aria-label="Floating label select example" required>
+                                <option value="">Selected Course</option>
+                              </select>
+                              <label htmlFor="course">Selected Course</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="duration" name="duration" placeholder="Duration" disabled
+                                value="" />
+                              <label htmlFor="duration">Duration</label>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="total-fee" name="total-fee" placeholder="Total Fee"
+                                disabled value="" />
+                              <label htmlFor="total-fee">Total Fee</label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-md-2">
+                      <p class="h5 section-title">Transaction Details</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="grouped">
+                        <div class="row">
+                          <div class="col-md">
+
+                            <div class="form-floating">
+                              <input type="number" class="form-control" id="reg-amt" name="reg-amt"
+                                placeholder="Registration Amount" disabled value="1000" />
+                              <label htmlFor="reg-amt">Registration Amount</label>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input type="date" class="form-control" id="date" name="date"
+                                placeholder="Transaction Date" required/>
+                              <label htmlFor="date">Transaction Date</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Transaction Date
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input type="time" class="form-control" id="time" name="time"
+                                placeholder="Transaction Time" required/>
+                              <label htmlFor="time">Transaction Time</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Transaction Time
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="bank" name="bank" placeholder="Bank Name" required/>
+                              <label htmlFor="bank">Bank Name</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Bank Name
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="trns-id" name="trns-id" placeholder="Transaction ID" required/>
+                              <label htmlFor="trns-id">Transaction ID</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Transaction ID
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md mt-3">
+                            <div class="form-floating">
+                              <input class="form-control" id="location" name="location" placeholder="Location" required/>
+                              <label htmlFor="location">Location</label>
+                              <div class="invalid-feedback">
+                                Please provide a valid Location
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="mt-5 mb-4">
+                    <!-- <button class="col-6 col-md-3 mybtn">Register</button> -->
+                    <button class="col-6 col-md-3 btn btn-dark mybtn" type="submit">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+
+    ScrollReveal().reveal('.logo', { scale: 0.4 });
+    ScrollReveal().reveal('.my-list-group', { distance: '50px', origin: 'left' });
+    ScrollReveal().reveal('.form-floating', { scale: 0.85, distance: '50px', origin: 'left' });
+    ScrollReveal().reveal('.section-title', { scale: 0.85, distance: '50px', origin: 'left' });
+    ScrollReveal().reveal('.mybtn', { scale: 0.85, distance: '50px', origin: 'left' });
+
+    const courses = [
+      { name: 'React JS', total_fee: 5500, duration: '1.5 Months', value: 1 },
+      { name: 'Angular 11', total_fee: 5500, duration: '1.5 Months', value: 2 },
+      { name: 'Advance Excel', total_fee: 4500, duration: '1.5 Months', value: 3 },
+    ];
+
+    const years = [
+      { name: 'First', value: 1 },
+      { name: 'Second', value: 2 },
+      { name: 'Third', value: 3 },
+      { name: 'Fourth', value: 4 },
+    ];
+
+    const semester = []
+
+    setYear = () => {
+      let node = `
+      <option value="">Select</option>
+      `;
+      years.forEach(year => {
+        node += `
+          <option value="${year.value}">${year.name}</option>
+          `;
+      })
+      document.getElementById('year').innerHTML = node;
+    }
+
+    setSemester = () => {
+      document.getElementById('year').onchange = e => {
+        let semester_options = '';
+        let sel_year = e.target.value;
+        console.log(sel_year);
+        let sem_options = '';
+        if (sel_year == 1) {
+          semester_options +=
+            `
+          <option value="1">1st</option>
+          <option value="2">2nd</option>
+          `
+        } else if (sel_year == 2) {
+          semester_options +=
+            `
+          <option value="3">Third</option>
+          <option value="4">Fourth</option>
+          `
+        } else if (sel_year == 3) {
+          semester_options +=
+            `
+          <option value="5">Fifth</option>
+          <option value="6">Sixth</option>
+          `
+        } else if (sel_year == 4) {
+          semester_options +=
+            `
+          <option value="7">7th</option>
+          <option value="8">8th</option>
+          `
+        }
+        document.getElementById('semester').innerHTML = semester_options;
+      }
+    }
+
+    setCourse = () => {
+      let course_options = `
+      <option value="">Select</option>
+      `;
+      courses.forEach(course => {
+        course_options += `
+          <option value="${course.value}">${course.name}</option>
+          `;
+      })
+      document.getElementById('course').innerHTML = course_options;
+    }
+
+
+    setCourseDetails = () => {
+      document.getElementById('course').onchange = e => {
+        console.log(e.target.value);
+        document.getElementById('duration').value = courses[e.target.value - 1].duration;
+        document.getElementById('total-fee').value = courses[e.target.value - 1].total_fee;
+      }
+    }
+
+    let items = [...document.getElementsByClassName('my-list-group-item')];
+    console.log(items);
+    items.forEach(ele => {
+      ele.onclick = (e) => {
+        console.log(e)
+        remove_all();
+        ele.classList.add('active-item');
+      }
+    });
+
+    remove_all = () => {
+      items.forEach(ele => {
+        ele.classList.remove('active-item');
+      });
+    }
+
+    const initForm = () => {
+      setCourse();
+      setYear();
+      setSemester();
+      setCourse();
+      setCourseDetails();
+    }
+
+    initForm();
+
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+</body>
+
+</html>

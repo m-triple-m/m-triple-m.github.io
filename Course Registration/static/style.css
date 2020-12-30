@@ -1,0 +1,105 @@
+.my-list-group-item{
+    /* border: 1px solid gray; */
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 2px;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.my-list-group-item:hover{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.295);
+    background-color: white;
+    color: black;
+}
+
+.active-item{
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.295);
+    background-color: white;
+    color: black;
+}
+
+.mybtn{
+    margin-left: auto;
+    display: block;
+    padding: 0.5rem 1rem;
+    /* background-image: linear-gradient(to bottom, #1543b6, #1d2cb4);
+    border: 1px solid #1d2cb4;
+    color: white;
+    font-family: Montserrat;
+    border-radius: 4px; */
+    box-shadow: 0 8px 6px -6px black;
+    transition-duration: 200ms;
+    transition-property: all;
+}
+
+.card-side , .card-main , .card-form{
+    border-radius: 0rem;
+}
+
+/* .mybtn:hover{
+    background-image: linear-gradient(to bottom, #391db4, #183e9e);
+    box-shadow: 2px 8px 10px -4px black;
+} */
+
+.logo{
+    width: 80%;
+    margin: 3rem 0;
+}
+
+.card{
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.sub-title{
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    background-color: #152083;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+#main-con{
+    margin-top: 5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .logo{
+        width: 60%;
+        /* margin: 3rem 0; */
+    }
+
+    .sub-title{
+        padding: 1rem 2rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        background-color: #152083;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    
+    #main-con{
+        margin-top: 0;
+    }
+
+    .card-main{
+        margin: 0;
+    }
+
+}
