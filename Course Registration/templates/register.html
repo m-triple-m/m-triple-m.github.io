@@ -41,7 +41,7 @@
             <img src="./logo2.png" class="logo" />
 
             <div class="my-list-group">
-              <div class="my-list-group-item">
+              <div class="my-list-group-item active-item">
                 <p class="h4">IT Training & Development</p>
               </div>
               <hr />
@@ -371,6 +371,7 @@
     const semester = []
 
     setYear = () => {
+
       let node = `
       <option value="">Select</option>
       `;
@@ -479,7 +480,7 @@
               event.stopPropagation()
             }
 
-            form.classList.add('was-validated')
+            form.classList.add('was-validated') 
           }, false)
         })
     })()
