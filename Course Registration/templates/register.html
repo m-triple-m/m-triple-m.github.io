@@ -15,6 +15,8 @@
 
 <body>
 
+  <a id="to-top"></a>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -272,7 +274,7 @@
                           <div class="col-md mt-3">
                             <div class="form-floating">
                               <input type="date" class="form-control" id="date" name="date"
-                                placeholder="Transaction Date" required/>
+                                placeholder="Transaction Date" required />
                               <label htmlFor="date">Transaction Date</label>
                               <div class="invalid-feedback">
                                 Please provide a valid Transaction Date
@@ -282,7 +284,7 @@
                           <div class="col-md mt-3">
                             <div class="form-floating">
                               <input type="time" class="form-control" id="time" name="time"
-                                placeholder="Transaction Time" required/>
+                                placeholder="Transaction Time" required />
                               <label htmlFor="time">Transaction Time</label>
                               <div class="invalid-feedback">
                                 Please provide a valid Transaction Time
@@ -294,7 +296,7 @@
                         <div class="row">
                           <div class="col-md mt-3">
                             <div class="form-floating">
-                              <input class="form-control" id="bank" name="bank" placeholder="Bank Name" required/>
+                              <input class="form-control" id="bank" name="bank" placeholder="Bank Name" required />
                               <label htmlFor="bank">Bank Name</label>
                               <div class="invalid-feedback">
                                 Please provide a valid Bank Name
@@ -306,7 +308,8 @@
                         <div class="row">
                           <div class="col-md mt-3">
                             <div class="form-floating">
-                              <input class="form-control" id="trns-id" name="trns-id" placeholder="Transaction ID" required/>
+                              <input class="form-control" id="trns-id" name="trns-id" placeholder="Transaction ID"
+                                required />
                               <label htmlFor="trns-id">Transaction ID</label>
                               <div class="invalid-feedback">
                                 Please provide a valid Transaction ID
@@ -315,7 +318,8 @@
                           </div>
                           <div class="col-md mt-3">
                             <div class="form-floating">
-                              <input class="form-control" id="location" name="location" placeholder="Location" required/>
+                              <input class="form-control" id="location" name="location" placeholder="Location"
+                                required />
                               <label htmlFor="location">Location</label>
                               <div class="invalid-feedback">
                                 Please provide a valid Location
@@ -463,6 +467,23 @@
       setCourseDetails();
     }
 
+    var btn = document.getElementById('to-top');
+
+    document.onscroll = () => {
+      if (window.scrollTop > 50) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+      console.log('ds');
+    }
+
+    btn.onclick = function (e) {
+      e.preventDefault();
+      document.getElementsByTagName('html').animate({ scrollTop: 0 }, '300');
+      console.log('ds');
+    }
+
     initForm();
 
     (function () {
@@ -480,7 +501,7 @@
               event.stopPropagation()
             }
 
-            form.classList.add('was-validated') 
+            form.classList.add('was-validated')
           }, false)
         })
     })()
